@@ -1,0 +1,2882 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    130769,       2872]
+NotebookOptionsPosition[    128721,       2827]
+NotebookOutlinePosition[    129130,       2843]
+CellTagsIndexPosition[    129087,       2840]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"URLDownload", "[", 
+  "\"\<https://docs.google.com/spreadsheets/d/1yZv9w9zRKwrGTaR-\
+YzmAqMefw4wMlaXocejdxZaTs6w/export?format=xlsx\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7894807755228815`*^9, 3.7894807829039583`*^9}, {
+  3.7894810471247034`*^9, 3.7894810926931734`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"31aa7e4e-9860-4386-8557-4842025c3765"],
+
+Cell[BoxData[
+ RowBox[{"File", "[", 
+  TemplateBox[{
+   "\"C:\\\\Users\\\\arnoudb.WRI\\\\AppData\\\\Local\\\\Temp\\\\export-\
+2a7f5d48-7d08-41be-950b-a55baeff3fb7.tmp\""},
+   "FileArgument"], "]"}]], "Output",
+ CellChangeTimes->{
+  3.789480791255046*^9, {3.7894810765770025`*^9, 3.7894810960002117`*^9}},
+ CellLabel->"Out[5]=",ExpressionUUID->"47598eb6-6fde-416e-8761-51ff75414397"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"file", "=", "%"}]], "Input",
+ CellChangeTimes->{{3.789481104147297*^9, 3.7894811050663013`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"852f7df5-16cd-4a01-9712-2f7d87572b34"],
+
+Cell[BoxData[
+ RowBox[{"File", "[", 
+  TemplateBox[{
+   "\"C:\\\\Users\\\\arnoudb.WRI\\\\AppData\\\\Local\\\\Temp\\\\export-\
+2a7f5d48-7d08-41be-950b-a55baeff3fb7.tmp\""},
+   "FileArgument"], "]"}]], "Output",
+ CellChangeTimes->{3.789481105346304*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"8ee0a6e6-05dc-4954-8715-157b2f25f881"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"xlsx", "=", 
+  RowBox[{"Import", "[", 
+   RowBox[{"file", ",", "\"\<XLSX\>\""}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.789481100276252*^9, 3.789481110994364*^9}, {
+  3.7894813249015713`*^9, 3.789481326898592*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"27ab572f-fac8-4aa2-bb09-23bdcc5a846a"],
+
+Cell[BoxData[
+ InterpretationBox[
+  TagBox[
+   FrameBox[GridBox[{
+      {
+       ItemBox[
+        TagBox[
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              
+              RowBox[{"\<\"Province/State\"\>", ",", "\<\"Country/Region\"\>",
+                ",", "\<\"Last Update\"\>", ",", "\<\"Confirmed\"\>", 
+               ",", "\<\"Deaths\"\>", ",", "\<\"Recovered\"\>"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\<\"Hubei\"\>", ",", "\<\"Mainland China\"\>", ",", 
+               TemplateBox[{
+                 RowBox[{"\"Thu 30 Jan 2020 21:30:00\"", 
+                   StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "6`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                 RowBox[{"DateObject", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2020", ",", "1", ",", "30", ",", "21", ",", "30", ",", 
+                    "0`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                    ",", 
+                    RowBox[{"-", "6`"}]}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "5806`", ",", "204`", ",", "116`"}], 
+              "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\<\"Zhejiang\"\>", ",", "\<\"Mainland China\"\>", ",", 
+               TemplateBox[{
+                 RowBox[{"\"Thu 30 Jan 2020 21:30:00\"", 
+                   StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "6`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                 RowBox[{"DateObject", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "2020", ",", "1", ",", "30", ",", "21", ",", "30", ",", 
+                    "0`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                    ",", 
+                    RowBox[{"-", "6`"}]}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "537`", ",", "\<\"\"\>", ",", "9`"}], 
+              "}"}], ",", 
+             TemplateBox[{"55"},
+              "OutputSizeLimit`Skeleton"], ",", 
+             RowBox[{"{", 
+              RowBox[{"\<\"\"\>", ",", "\<\"India\"\>", ",", 
+               TemplateBox[{
+                 RowBox[{"\"Thu 30 Jan 2020 21:30:00\"", 
+                   StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "6`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                 RowBox[{"DateObject", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2020", ",", "1", ",", "30", ",", "21", ",", "30", ",", 
+                    "0`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                    ",", 
+                    RowBox[{"-", "6`"}]}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "1`", ",", "\<\"\"\>", 
+               ",", "\<\"\"\>"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"\<\"\"\>", ",", "\<\"Italy\"\>", ",", 
+               TemplateBox[{
+                 RowBox[{"\"Thu 30 Jan 2020 21:30:00\"", 
+                   StyleBox[
+                    RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"-", "6`"}], NumberMarks -> False, StripOnInput -> 
+                    False]}], FontColor -> GrayLevel[0.5]]}], 
+                 RowBox[{"DateObject", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "2020", ",", "1", ",", "30", ",", "21", ",", "30", ",", 
+                    "0`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", 
+                    ",", 
+                    RowBox[{"-", "6`"}]}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "2`", ",", "\<\"\"\>", 
+               ",", "\<\"\"\>"}], "}"}]}], "}"}], ",", 
+           TemplateBox[{"19"},
+            "OutputSizeLimit`Skeleton"], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              TemplateBox[{"1"},
+               "OutputSizeLimit`Skeleton"], "}"}], ",", 
+             TemplateBox[{"998"},
+              "OutputSizeLimit`Skeleton"], ",", 
+             RowBox[{"{", 
+              
+              RowBox[{"\<\"\"\>", ",", "\<\"\"\>", ",", "\<\"\"\>", 
+               ",", "\<\"\"\>", ",", "\<\"\"\>"}], "}"}]}], "}"}]}], "}"}],
+         Short[#, 5]& ],
+        BaseStyle->{Deployed -> False},
+        StripOnInput->False]},
+      {GridBox[{
+         {
+          PaneBox[
+           TagBox[
+            TooltipBox[
+             StyleBox[
+              StyleBox[
+               DynamicBox[ToBoxes[
+                 FEPrivate`FrontEndResource[
+                 "FEStrings", "sizeBriefExplanation"], StandardForm],
+                ImageSizeCache->{49., {2., 7.}}],
+               StripOnInput->False,
+               DynamicUpdating->True,
+               LineSpacing->{1, 2},
+               LineIndent->0,
+               LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLText",
+              StripOnInput->False],
+             StyleBox[
+              DynamicBox[
+               ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"], 
+                StandardForm]], DynamicUpdating -> True, LineIndent -> 0, 
+              LinebreakAdjustments -> {1., 100, 0, 0, 0}, 
+              LineSpacing -> {1, 2}, StripOnInput -> False]],
+            Annotation[#, 
+             Style[
+              Dynamic[
+               FEPrivate`FrontEndResource["FEStrings", "sizeExplanation"]], 
+              DynamicUpdating -> True, LineIndent -> 0, 
+              LinebreakAdjustments -> {1., 100, 0, 0, 0}, 
+              LineSpacing -> {1, 2}], "Tooltip"]& ],
+           Alignment->Center,
+           BaselinePosition->Baseline,
+           ImageSize->{Automatic, {25, Full}}], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm],
+               ImageSizeCache->{40., {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowLess"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 10, 20639315033754359497, 5/2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm],
+               ImageSizeCache->{46.5, {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowMore"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 10, 20639315033754359497, 5 2],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm],
+               ImageSizeCache->{34.5, {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeShowAll"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           
+           ButtonFunction:>OutputSizeLimit`ButtonFunction[
+            OutputSizeLimit`Defer, 10, 20639315033754359497, Infinity],
+           Enabled->True,
+           Evaluator->Automatic,
+           Method->"Queued"], 
+          ButtonBox[
+           PaneSelectorBox[{False->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm],
+               ImageSizeCache->{60., {1., 7.}}],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControl",
+             StripOnInput->False], True->
+            StyleBox[
+             StyleBox[
+              DynamicBox[ToBoxes[
+                FEPrivate`FrontEndResource["FEStrings", "sizeChangeLimit"], 
+                StandardForm]],
+              StripOnInput->False,
+              DynamicUpdating->True,
+              LineSpacing->{1, 2},
+              LineIndent->0,
+              LinebreakAdjustments->{1., 100, 0, 0, 0}], "OSLControlActive",
+             StripOnInput->False]}, Dynamic[
+             CurrentValue["MouseOver"]],
+            Alignment->Center,
+            FrameMargins->0,
+            ImageSize->{Automatic, {25, Full}}],
+           Appearance->None,
+           BaselinePosition->Baseline,
+           ButtonFunction:>FrontEndExecute[{
+              FrontEnd`SetOptions[
+              FrontEnd`$FrontEnd, 
+               FrontEnd`PreferencesSettings -> {"Page" -> "Advanced"}], 
+              FrontEnd`FrontEndToken["PreferencesDialog"]}],
+           Evaluator->None,
+           Method->"Preemptive"]}
+        },
+        AutoDelete->False,
+        FrameStyle->GrayLevel[0.85],
+        GridBoxDividers->{"Columns" -> {False, {True}}},
+        GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+        GridBoxSpacings->{"Columns" -> {{2}}}]}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Baseline}}},
+     GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{1.}}},
+     GridBoxSpacings->{"Columns" -> {
+         Offset[0.27999999999999997`], {
+          Offset[0.5599999999999999]}, 
+         Offset[0.27999999999999997`]}, "Rows" -> {
+         Offset[0.2], 
+         Offset[1.2], {
+          Offset[0.4]}, 
+         Offset[0.2]}}],
+    BaseStyle->"OutputSizeLimit",
+    FrameMargins->{{12, 12}, {0, 15}},
+    FrameStyle->GrayLevel[0.85],
+    RoundingRadius->5,
+    StripOnInput->False],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  If[20639315033754359497 === $SessionID, 
+   Out[10], Message[
+     MessageName[Syntax, "noinfoker"]]; Missing["NotAvailable"]; 
+   Null]]], "Output",
+ CellChangeTimes->{3.789481112804387*^9, 3.789481328263604*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"0cbec1a6-ff37-419e-9db3-66e8eb5a604e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "xlsx", "]"}]], "Input",
+ CellChangeTimes->{{3.789481329476618*^9, 3.7894813322746477`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"8bf30f6b-0095-437f-b467-4374575d0bf2"],
+
+Cell[BoxData["21"], "Output",
+ CellChangeTimes->{3.78948133256465*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"b06ef999-78a8-4628-8d73-27327cce6bdc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"xlsx", "//", "First"}], "]"}]], "Input",
+ CellChangeTimes->{{3.789481336036686*^9, 3.789481347410804*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"5ae9cde7-55e6-4c18-a66d-215a377a1d31"],
+
+Cell[BoxData["60"], "Output",
+ CellChangeTimes->{3.7894813478018064`*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"3e84e71f-0582-4454-a062-3d799a196bd8"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"current", "=", 
+   RowBox[{"First", "[", "xlsx", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Take", "[", 
+  RowBox[{"current", ",", "3"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.789481350020829*^9, 3.7894813524908557`*^9}, {
+  3.7894814318456726`*^9, 3.7894814447228055`*^9}},
+ CellLabel->"In[14]:=",ExpressionUUID->"8bc4e669-19f5-47e4-a611-b0c263b61276"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"Province/State\"\>", ",", "\<\"Country/Region\"\>", 
+     ",", "\<\"Last Update\"\>", ",", "\<\"Confirmed\"\>", 
+     ",", "\<\"Deaths\"\>", ",", "\<\"Recovered\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Hubei\"\>", ",", "\<\"Mainland China\"\>", ",", 
+     TemplateBox[{
+       RowBox[{"\"Thu 30 Jan 2020 21:30:00\"", 
+         StyleBox[
+          RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{"-", "6`"}], NumberMarks -> False, StripOnInput -> 
+             False]}], FontColor -> GrayLevel[0.5]]}], 
+       RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             
+             RowBox[{"2020", ",", "1", ",", "30", ",", "21", ",", "30", ",", 
+               "0`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "6`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "5806`", ",", "204`", ",", "116`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Zhejiang\"\>", ",", "\<\"Mainland China\"\>", ",", 
+     TemplateBox[{
+       RowBox[{"\"Thu 30 Jan 2020 21:30:00\"", 
+         StyleBox[
+          RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+            StyleBox[
+             RowBox[{"-", "6`"}], NumberMarks -> False, StripOnInput -> 
+             False]}], FontColor -> GrayLevel[0.5]]}], 
+       RowBox[{"DateObject", "[", 
+         RowBox[{
+           RowBox[{"{", 
+             
+             RowBox[{"2020", ",", "1", ",", "30", ",", "21", ",", "30", ",", 
+               "0`"}], "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+           RowBox[{"-", "6`"}]}], "]"}]},
+      "DateObject",
+      Editable->False], ",", "537`", ",", "\<\"\"\>", ",", "9`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.7894813529308605`*^9, 3.7894814450708113`*^9},
+ CellLabel->"Out[15]=",ExpressionUUID->"b23eedec-d582-4188-b357-ccde65028a7b"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Interpreter", "[", "\"\<AdministrativeDivision\>\"", "]"}], "[", 
+  "\"\<Hubei Mainland China\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7894815955818653`*^9, 3.789481608475998*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"fe2c1313-a68a-4bc8-a0e3-4317c2030ff1"],
+
+Cell[BoxData[
+ TemplateBox[{"\"Hubei, China\"", 
+   RowBox[{"Entity", "[", 
+     RowBox[{"\"AdministrativeDivision\"", ",", 
+       RowBox[{"{", 
+         RowBox[{"\"Hubei\"", ",", "\"China\""}], "}"}]}], "]"}], 
+   "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Hubei\\\", \
+\\\"China\\\"}]\"", "\"administrative division\""},
+  "Entity"]], "Output",
+ CellChangeTimes->{3.7894816103990173`*^9},
+ CellLabel->"Out[17]=",ExpressionUUID->"e2006b40-52dc-430e-a751-158dafe04e8c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Map", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"<|", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"\"\<Region\>\"", "\[Rule]", 
+        RowBox[{
+         RowBox[{"Interpreter", "[", "\"\<AdministrativeDivision\>\"", "]"}], 
+         "[", 
+         RowBox[{
+          RowBox[{"First", "[", "#", "]"}], "<>", "\"\< \>\"", "<>", 
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"\"\<date\>\"", "\[Rule]", 
+        RowBox[{"#", "[", 
+         RowBox[{"[", "3", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<cases\>\"", "\[Rule]", 
+        RowBox[{"Round", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "4", "]"}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<deaths\>\"", "\[Rule]", 
+        RowBox[{"Round", "[", 
+         RowBox[{"#", "[", 
+          RowBox[{"[", "5", "]"}], "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"\"\<recoveries\>\"", "\[Rule]", 
+        RowBox[{"Round", "[", 
+         RowBox[{"Last", "[", "#", "]"}], "]"}]}]}], "|>"}], "&"}], ",", 
+    RowBox[{"Rest", "[", "current", "]"}]}], "]"}], "//", 
+  "Dataset"}]], "Input",
+ CellChangeTimes->{{3.78948144717283*^9, 3.7894816275401917`*^9}, {
+  3.7894817474474287`*^9, 3.789481748900448*^9}},
+ CellLabel->"In[20]:=",ExpressionUUID->"50b6cd85-aadc-497e-818c-b84cd5970f62"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = 
+    Association["InitialData" -> {
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Hubei", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 5806, "deaths" -> 204, "recoveries" -> 
+        116], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Zhejiang", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 537, "deaths" -> Round[""], 
+        "recoveries" -> 9], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Guangdong", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 393, "deaths" -> Round[""], 
+        "recoveries" -> 11], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Henan", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 352, "deaths" -> 2, "recoveries" -> 
+        3], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Hunan", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 332, "deaths" -> Round[""], 
+        "recoveries" -> 2], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Jiangxi", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 240, "deaths" -> Round[""], 
+        "recoveries" -> 7], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Anhui", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 237, "deaths" -> Round[""], 
+        "recoveries" -> 3], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Chongqing", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 206, "deaths" -> Round[""], 
+        "recoveries" -> 1], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Shandong", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 178, "deaths" -> Round[""], 
+        "recoveries" -> 2], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Sichuan", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 177, "deaths" -> 1, "recoveries" -> 
+        1], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Jiangsu", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 168, "deaths" -> Round[""], 
+        "recoveries" -> 2], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Shanghai", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 128, "deaths" -> 1, "recoveries" -> 
+        9], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Beijing", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 121, "deaths" -> 1, "recoveries" -> 
+        5], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Fujian", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 101, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Guangxi", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 87, "deaths" -> Round[""], 
+        "recoveries" -> 2], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Hebei", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 82, "deaths" -> 1, "recoveries" -> 
+        Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Yunnan", "China"}], 
+        "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 76, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Shaanxi", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 87, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> 
+        Entity["AdministrativeDivision", {"Heilongjiang", "China"}], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 59, "deaths" -> 2, "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Hainan", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 50, "deaths" -> 1, "recoveries" -> 1], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Liaoning", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 45, "deaths" -> Round[""], 
+        "recoveries" -> 1], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Shanxi", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 39, "deaths" -> Round[""], 
+        "recoveries" -> 1], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Tianjin", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 32, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Gansu", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 29, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Ningxia", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 21, "deaths" -> Round[""], 
+        "recoveries" -> 1], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Neimenggu", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 20, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Xinjiang", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 17, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Guizhou", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 15, "deaths" -> Round[""], 
+        "recoveries" -> 1], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Jilin", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 14, "deaths" -> Round[""], 
+        "recoveries" -> 1], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 12, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Taiwan", "Taiwan"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 9, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Qinghai", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 8, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 7, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Xizang", "China"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 1, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> 
+        Entity["AdministrativeDivision", {"Washington", "UnitedStates"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 1, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> 
+        Entity["AdministrativeDivision", {"Illinois", "UnitedStates"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 2, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> 
+        Entity["AdministrativeDivision", {"California", "UnitedStates"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 2, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> 
+        Entity["AdministrativeDivision", {"Arizona", "UnitedStates"}], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 1, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 11, "deaths" -> Round[""], "recoveries" -> 1], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 14, "deaths" -> Round[""], "recoveries" -> 5], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 6, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 10, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 2, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 5, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 1, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 8, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Ontario", "Canada"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 2, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> 
+        Entity["AdministrativeDivision", {"BritishColumbia", "Canada"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 1, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 1, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 1, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> 
+        Entity["AdministrativeDivision", {"NewSouthWales", "Australia"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 4, "deaths" -> Round[""], 
+        "recoveries" -> 2], 
+       Association[
+       "Region" -> 
+        Entity["AdministrativeDivision", {"Victoria", "Australia"}], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 2, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> 
+        Entity["AdministrativeDivision", {"Queensland", "Australia"}], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 3, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association[
+       "Region" -> Entity["AdministrativeDivision", {"Bavaria", "Germany"}], 
+        "date" -> DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", 
+          "Gregorian", -6.], "cases" -> 4, "deaths" -> Round[""], 
+        "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 1, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 4, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 1, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 1, "deaths" -> Round[""], "recoveries" -> Round[""]], 
+       Association["Region" -> Failure["InterpretationFailure", 
+          Association[
+          "MessageTemplate" :> MessageName[Interpreter, "semantictype"], 
+           "MessageParameters" -> 
+           Association["Type" -> "administrative division"], "Type" -> 
+           "AdministrativeDivision"]], "date" -> 
+        DateObject[{2020, 1, 30, 21, 30, 0.}, "Instant", "Gregorian", -6.], 
+        "cases" -> 2, "deaths" -> Round[""], "recoveries" -> Round[""]]}, 
+     "InitialShape" -> TypeSystem`PackageScope`HeaderShape[
+       Association[{All, "Region"} -> 1, {All, "date"} -> 1, {All, "cases"} -> 
+        1, {All, "deaths"} -> 1, {All, "recoveries"} -> 1], 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          TypeSystem`PackageScope`RowShape[
+           Association[
+           "Region" -> TypeSystem`PackageScope`UnknownShape[False], "date" -> 
+            TypeSystem`PackageScope`AtomShape[75], "cases" -> 
+            TypeSystem`PackageScope`AtomShape[34], "deaths" -> 
+            TypeSystem`PackageScope`UnknownShape[False], "recoveries" -> 
+            TypeSystem`PackageScope`UnknownShape[False]]], 
+          DirectedInfinity[1], 5, {All}]], 20, 
+        DirectedInfinity[1], {}]], "InitialType" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Region", "date", "cases", "deaths", "recoveries"}, {
+        TypeSystem`AnyType, 
+         TypeSystem`Atom[DateObject], 
+         TypeSystem`Atom[Integer], TypeSystem`AnyType, TypeSystem`AnyType}], 
+       59], "Meta" -> Association["ID" -> 160391450638774], "RowTarget" -> 20,
+      "ColumnTarget" -> 20, "Shape" -> TypeSystem`PackageScope`HeaderShape[
+       Association[{All, "Region"} -> 1, {All, "date"} -> 1, {All, "cases"} -> 
+        1, {All, "deaths"} -> 1, {All, "recoveries"} -> 1], 
+       TypeSystem`PackageScope`Limited[
+        TypeSystem`PackageScope`ColumnShape[
+         TypeSystem`PackageScope`Limited[
+          TypeSystem`PackageScope`RowShape[
+           Association[
+           "Region" -> TypeSystem`PackageScope`UnknownShape[False], "date" -> 
+            TypeSystem`PackageScope`AtomShape[75], "cases" -> 
+            TypeSystem`PackageScope`AtomShape[34], "deaths" -> 
+            TypeSystem`PackageScope`UnknownShape[False], "recoveries" -> 
+            TypeSystem`PackageScope`UnknownShape[False]]], 
+          DirectedInfinity[1], 5, {All}]], 20, 
+        DirectedInfinity[1], {}]], "Type" -> TypeSystem`Vector[
+       TypeSystem`Struct[{
+        "Region", "date", "cases", "deaths", "recoveries"}, {
+        TypeSystem`AnyType, 
+         TypeSystem`Atom[DateObject], 
+         TypeSystem`Atom[Integer], TypeSystem`AnyType, TypeSystem`AnyType}], 
+       59], "Path" -> {}, "BaseIndices" -> {}, "DisplayedRowCount" -> 20, 
+     "DisplayedColumnCount" -> 5, "DataRowCount" -> 59, "DataColumnCount" -> 
+     5, "SortPaths" -> {}, "SortDirections" -> {}, "HiddenItemsMap" -> Null, 
+     "ScrollPosition" -> {1, 1}, "UpdateType" -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+    DynamicModule[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+        Style[
+         Grid[{{
+            Item[
+             Pane[
+              Row[{
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover["Region", 
+                    Style[
+                    "Region", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    1739520867][{All, "Region"}, 1]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                 1739520867][{All, "Region"}, "ColumnHeader", True], "Mouse"],
+                 " ", ""}], ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Row[{
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover["date", 
+                    Style[
+                    "date", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    1739520867][{All, "date"}, 1]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                 1739520867][{All, "date"}, "ColumnHeader", True], "Mouse"], 
+                " ", ""}], ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Row[{
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover["cases", 
+                    Style[
+                    "cases", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    1739520867][{All, "cases"}, 1]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                 1739520867][{All, "cases"}, "ColumnHeader", True], "Mouse"], 
+                " ", ""}], ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Row[{
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover["deaths", 
+                    Style[
+                    "deaths", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    1739520867][{All, "deaths"}, 1]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                 1739520867][{All, "deaths"}, "ColumnHeader", True], "Mouse"],
+                 " ", ""}], ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Row[{
+                Annotation[
+                 EventHandler[
+                  MouseAppearance[
+                   Mouseover["recoveries", 
+                    Style[
+                    "recoveries", FontColor -> 
+                    RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                   TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    1739520867][{All, "recoveries"}, 1]], 
+                 TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                 1739520867][{All, "recoveries"}, "ColumnHeader", True], 
+                 "Mouse"], " ", ""}], ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Hubei, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{1, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{1, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["5806"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{1, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["204"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{1, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["116"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{1, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Zhejiang, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{2, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{2, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["537"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{2, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{2, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["9"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{2, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Guangdong, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{3, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{3, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["393"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{3, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{3, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["11"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{3, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Henan, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{4, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{4, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["352"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{4, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{4, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["3"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{4, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Hunan, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{5, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{5, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["332"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{5, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{5, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{5, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Jiangxi, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{6, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{6, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["240"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{6, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{6, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["7"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{6, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Anhui, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{7, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{7, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["237"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{7, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{7, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["3"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{7, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Chongqing, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{8, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{8, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["206"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{8, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{8, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{8, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Shandong, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{9, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{9, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["178"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{9, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{9, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{9, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Sichuan, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{10, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{10, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["177"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{10, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{10, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{10, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Jiangsu, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{11, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{11, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["168"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{11, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{11, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{11, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Shanghai, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{12, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{12, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["128"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{12, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{12, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["9"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{12, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Beijing, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{13, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{13, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["121"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{13, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{13, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["5"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{13, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Fujian, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{14, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{14, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["101"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{14, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{14, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{14, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Guangxi, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{15, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{15, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["87"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{15, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{15, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{15, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Hebei, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{16, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{16, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["82"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{16, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{16, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{16, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Yunnan, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{17, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{17, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["76"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{17, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{17, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{17, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Shaanxi, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{18, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{18, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["87"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{18, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{18, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{18, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Heilongjiang, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{19, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{19, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["59"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{19, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["2"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{19, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{"Round", "[", "\"\"", "]"}], FontFamily -> 
+                 "Source Code Pro", ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{19, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox["\"Hainan, China\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{20, 
+                 Key["Region"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{150, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                "\"Thu 30 Jan 2020 21:30:00\"", FontColor -> RGBColor[{
+                    Rational[33, 74], 
+                    Rational[27, 74], 
+                    Rational[117, 370]}]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{20, 
+                 Key["date"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{75, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["50"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{20, 
+                 Key["cases"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{20, 
+                 Key["deaths"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+               1739520867][{20, 
+                 Key["recoveries"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Deploy[
+              Pane[
+               Row[{
+                 Spacer[2], 
+                 Style[
+                  Row[{
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]]], "LinkHand"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ - 20 
+                    If[True, 59, 1], {1, 59 - -20 + 1}], Appearance -> None], 
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 0, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]]], "LinkHand"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ - 20 
+                    If[False, 59, 1], {1, 59 - -20 + 1}], Appearance -> None],
+                     " ", 
+                    Style[
+                    Mouseover[
+                    Row[{"rows ", 1, "\[Dash]", 20, " of ", 
+                    Style[
+                    59, FontColor -> GrayLevel[0], FontWeight -> "Medium"]}, 
+                    BaseStyle -> {
+                    FontSize -> 8., FontColor -> 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]}], 
+                    Row[{"rows ", 1, "\[Dash]", 20, " of ", 
+                    Style[
+                    59, FontColor -> GrayLevel[0], FontWeight -> "Medium"]}, 
+                    BaseStyle -> {
+                    FontSize -> 8., FontColor -> 
+                    RGBColor[
+                    0.5098039215686274, 0.5098039215686274, 
+                    0.5098039215686274]}]], ContextMenu -> {
+                    MenuItem["Hide", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867},
+                     "Rows", 1, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 10 Rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867},
+                     "Rows", 10, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 30 Rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867},
+                     "Rows", 30, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show up to 100 Rows", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867},
+                     "Rows", 100, {}]], MenuEvaluator -> Automatic], 
+                    MenuItem["Show All", 
+                    KernelExecute[
+                    
+                    TypeSystem`NestedGrid`PackagePrivate`adjustLimits[{
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867},
+                     "Rows", 100000000, {}]], MenuEvaluator -> Automatic]}], 
+                    " ", 
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 180 Degree, {
+                    9, 9}]}, ImageSize -> (1 -> 1), 
+                    ImagePadding -> {{0, 1}, {1, 0}}, BaselinePosition -> 
+                    Scaled[0.35]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}]}, {5, 6.5}], 180 Degree, {
+                    9, 9}]}, ImageSize -> (1 -> 1), 
+                    ImagePadding -> {{0, 1}, {1, 0}}, BaselinePosition -> 
+                    Scaled[0.35]]], "LinkHand"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
+                    20 If[False, 59, 1], {1, 59 - 20 + 1}], Appearance -> 
+                    None], 
+                    Button[
+                    MouseAppearance[
+                    Mouseover[
+                    Graphics[{{
+                    EdgeForm[None], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.5372549019607843, 0.5372549019607843, 
+                    0.5372549019607843], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 180 Degree, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]], 
+                    Graphics[{{
+                    EdgeForm[
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549]], 
+                    FaceForm[None], 
+                    Rectangle[{0, 0}, {18, 18}, RoundingRadius -> 2]}, 
+                    Rotate[
+                    Translate[{
+                    CapForm[Round], 
+                    RGBColor[
+                    0.27450980392156865`, 0.5411764705882353, 
+                    0.796078431372549], 
+                    Line[{{0, 0}, {4, 5}, {8, 0}}], 
+                    Line[{{0, 5}, {8, 5}}]}, {5, 6.5}], 180 Degree, {9, 9}]}, 
+                    ImageSize -> (1 -> 1), ImagePadding -> {{0, 1}, {1, 0}}, 
+                    BaselinePosition -> Scaled[0.35]]], "LinkHand"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 
+                    Clip[TypeSystem`NestedGrid`PackagePrivate`$vPos$$ + 
+                    20 If[True, 59, 1], {1, 59 - 20 + 1}], Appearance -> 
+                    None]}], ContextMenu -> {}], 
+                 Graphics[{
+                   RGBColor[
+                   0.8196078431372549, 0.8196078431372549, 
+                    0.8196078431372549], 
+                   Line[{{0, 0}, {0, 19}}]}, ImageSize -> (1 -> 1), 
+                  ImagePadding -> {{0, 0}, {0, 0}}, BaselinePosition -> 
+                  Scaled[0.35]]}], ImageMargins -> {{0, -1}, {-1, 1}}]], 
+             Background -> 
+             RGBColor[
+              0.9764705882352941, 0.9764705882352941, 0.9764705882352941], 
+             Alignment -> {Left, Top}], SpanFromLeft, SpanFromLeft, 
+            SpanFromLeft, SpanFromLeft}}, 
+          BaseStyle -> {
+           ContextMenu -> 
+            Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                1739520867, {}, 
+                TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger = 
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                 With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                   Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    StringJoin["Show ", 
+                    Which[
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    ToString[
+                    ReplaceAll[
+                    Last[TypeSystem`NestedGrid`PackagePrivate`lastPath$], Key[
+                    Pattern[TypeSystem`NestedGrid`PackagePrivate`x, 
+                    Blank[]]] :> TypeSystem`NestedGrid`PackagePrivate`x]], 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""]], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    StringJoin["Hide ", 
+                    Which[
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    ToString[
+                    ReplaceAll[
+                    Last[TypeSystem`NestedGrid`PackagePrivate`lastPath$], Key[
+                    Pattern[TypeSystem`NestedGrid`PackagePrivate`x, 
+                    Blank[]]] :> TypeSystem`NestedGrid`PackagePrivate`x]], 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""]], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic]}]]]], FontFamily -> "Verdana",
+             FontSize -> 12}, Spacings -> {0, 0}, Alignment -> Left, Dividers -> 
+          All, FrameStyle -> GrayLevel[0.7490196078431373], 
+          BaseStyle -> {FontFamily -> "Verdana", FontSize -> 12}], 
+         LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> False, 
+         ShowAutoStyles -> False]], 
+      TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+     Dynamic[
+      TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+         Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+         Module[{
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+           TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+           TypeSystem`NestedGrid`PackagePrivate`datasetData[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+             TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+             TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867][
+             TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+            Not[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+            TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+            TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+       TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+       TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+         FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+         TypeSystem`SparseGrid[
+          TypeSystem`H["(data no longer present)"]], 
+         If[GeneralUtilities`$DebugMode, 
+          Row[{TypeSystem`NestedGrid`PackagePrivate`renderedGrid, "  ", 
+            TypeSystem`NestedGrid`PackagePrivate`formatState[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+             TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+             TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+             TypeSystem`NestedGrid`PackagePrivate`$hPos$$]}], 
+          TypeSystem`NestedGrid`PackagePrivate`renderedGrid]]], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+     DynamicModuleValues :> {}], 
+    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+     TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+      TypeSystem`PackageScope`Pathbar[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+       TypeSystem`NestedGrid`PackagePrivate`updateState[
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$, 1739520867]]], 
+     TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+     Framed[
+      Dynamic[
+       Replace[
+        MouseAnnotation[Null], {
+        TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1739520867][Null, 
+           Blank[]] -> "", 
+         TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[1739520867][
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+            Blank[]]] :> (
+          Increment[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+           TypeSystem`NestedGrid`PackagePrivate`path$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+           TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+           TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 1739520867; 
+          TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+           TypeSystem`NestedGrid`PackagePrivate`path$, 
+            TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+         Spacer[10], Blank[] :> Spacer[10]}], TrackedSymbols :> {}], 
+      FrameStyle -> None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> 
+      Top, ImageSize -> {Automatic, 15}], FontSize -> 1]}, 
+    DynamicBox[ToBoxes[
+      Dataset`DatasetContent[
+      1, "Path" -> TypeSystem`NestedGrid`PackagePrivate`$path$$, "Grid" -> 
+       TypeSystem`NestedGrid`PackagePrivate`$grid$$, "State" -> 
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, "VPos" -> 
+       Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+       Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], "TopBar" -> 
+       TypeSystem`NestedGrid`PackagePrivate`$topBar$$, "BottomBar" -> 
+       TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], StandardForm],
+     ImageSizeCache->{553., {284., 290.}},
+     TrackedSymbols:>{
+      TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+       TypeSystem`NestedGrid`PackagePrivate`$grid$$}],
+    BaseStyle->{LineBreakWithin -> False},
+    DynamicModuleValues:>{},
+    Initialization:>
+     Block[{$ContextPath = $ContextPath}, Needs["TypeSystem`"]; 
+      Needs["Dataset`"]]],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Dataset`InterpretDataset[1],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.789481589501808*^9, 3.7894816580555058`*^9, 
+  3.789481750832467*^9},
+ CellLabel->"Out[20]=",ExpressionUUID->"2130907a-16ab-415f-8fc7-068ec402c61a"]
+}, Open  ]]
+},
+WindowSize->{1634., 863.5},
+WindowMargins->{{Automatic, 91.5}, {68.5, Automatic}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (January 29, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6f7bc24c-f7c9-4c5f-a50f-a0002b81d232"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 379, 6, 28, "Input",ExpressionUUID->"31aa7e4e-9860-4386-8557-4842025c3765"],
+Cell[962, 30, 382, 8, 39, "Output",ExpressionUUID->"47598eb6-6fde-416e-8761-51ff75414397"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1381, 43, 198, 3, 28, "Input",ExpressionUUID->"852f7df5-16cd-4a01-9712-2f7d87572b34"],
+Cell[1582, 48, 329, 7, 39, "Output",ExpressionUUID->"8ee0a6e6-05dc-4954-8715-157b2f25f881"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1948, 60, 319, 6, 28, "Input",ExpressionUUID->"27ab572f-fac8-4aa2-bb09-23bdcc5a846a"],
+Cell[2270, 68, 13474, 331, 164, "Output",ExpressionUUID->"0cbec1a6-ff37-419e-9db3-66e8eb5a604e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15781, 404, 209, 3, 28, "Input",ExpressionUUID->"8bf30f6b-0095-437f-b467-4374575d0bf2"],
+Cell[15993, 409, 149, 2, 32, "Output",ExpressionUUID->"b06ef999-78a8-4628-8d73-27327cce6bdc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16179, 416, 235, 4, 28, "Input",ExpressionUUID->"5ae9cde7-55e6-4c18-a66d-215a377a1d31"],
+Cell[16417, 422, 152, 2, 32, "Output",ExpressionUUID->"3e84e71f-0582-4454-a062-3d799a196bd8"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16606, 429, 398, 8, 48, "Input",ExpressionUUID->"8bc4e669-19f5-47e4-a611-b0c263b61276"],
+Cell[17007, 439, 1943, 45, 73, "Output",ExpressionUUID->"b23eedec-d582-4188-b357-ccde65028a7b"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18987, 489, 298, 5, 28, "Input",ExpressionUUID->"fe2c1313-a68a-4bc8-a0e3-4317c2030ff1"],
+Cell[19288, 496, 474, 10, 44, "Output",ExpressionUUID->"e2006b40-52dc-430e-a751-158dafe04e8c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19799, 511, 1460, 34, 145, "Input",ExpressionUUID->"50b6cd85-aadc-497e-818c-b84cd5970f62"],
+Cell[21262, 547, 107443, 2277, 593, "Output",ExpressionUUID->"2130907a-16ab-415f-8fc7-068ec402c61a"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
