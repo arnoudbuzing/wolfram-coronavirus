@@ -1,0 +1,235 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9291,        227]
+NotebookOptionsPosition[      7857,        195]
+NotebookOutlinePosition[      8258,        211]
+CellTagsIndexPosition[      8215,        208]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["WHO", "Title",
+ CellChangeTimes->{{3.7894927292703266`*^9, 
+  3.7894927453369303`*^9}},ExpressionUUID->"4bff123a-a11d-4fed-aa04-\
+04d5c62729e1"],
+
+Cell["Situation Reports", "Subtitle",
+ CellChangeTimes->{{3.7894927292703266`*^9, 
+  3.7894927446219053`*^9}},ExpressionUUID->"ed07eda3-6be5-4624-8a6f-\
+2e99f58d68a9"],
+
+Cell["\<\
+Primarily processed PDF bulletins. No useful data for computation.\
+\>", "Text",
+ CellChangeTimes->{{3.7894933899774237`*^9, 
+  3.7894934182744303`*^9}},ExpressionUUID->"7023025c-3c8c-4667-b0ad-\
+854b0be980a6"],
+
+Cell[TextData[ButtonBox["https://www.who.int/emergencies/diseases/novel-\
+coronavirus-2019/situation-reports/",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://www.who.int/emergencies/diseases/novel-coronavirus-2019/\
+situation-reports/"], None},
+ ButtonNote->
+  "https://www.who.int/emergencies/diseases/novel-coronavirus-2019/situation-\
+reports/"]], "Item",
+ CellChangeTimes->{{3.7894934584438267`*^9, 
+  3.7894934630329795`*^9}},ExpressionUUID->"402e9757-4516-47c7-bc63-\
+9f0ce4e70737"],
+
+Cell[CellGroupData[{
+
+Cell["external", "Subsubsection",
+ CellChangeTimes->{{3.789492789447593*^9, 
+  3.789492790855646*^9}},ExpressionUUID->"348af0f5-3113-44e8-ba79-\
+f1a792f7c15b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RunProcess", "[", 
+   RowBox[{"{", 
+    RowBox[{"\"\<pip\>\"", ",", "\"\<install\>\"", ",", "\"\<pdf2image\>\""}],
+     "}"}], "]"}], 
+  RowBox[{"(*", 
+   RowBox[{"run", " ", "once"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.77584181897112*^9, 3.7758418292084455`*^9}, {
+  3.7894928018100595`*^9, 
+  3.7894928041121454`*^9}},ExpressionUUID->"62e34e08-9c8d-4bce-8fbe-\
+0927b6b7d937"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"py", "=", 
+   RowBox[{"StartExternalSession", "[", "\"\<Python\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ExternalEvaluate", "[", 
+   RowBox[{
+   "py", ",", 
+    "\"\<from pdf2image.exceptions import \
+(PDFInfoNotInstalledError,PDFPageCountError,PDFSyntaxError)\>\""}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ExternalEvaluate", "[", 
+   RowBox[{
+   "py", ",", 
+    "\"\<from pdf2image import convert_from_path, convert_from_bytes\>\""}], 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"pdf2images", "[", "url_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"file", ",", "images"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"file", "=", 
+      RowBox[{"URLDownload", "[", "url", "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"ExternalEvaluate", "[", 
+      RowBox[{"py", ",", 
+       RowBox[{"\"\<images=convert_from_path('\>\"", "<>", 
+        RowBox[{"StringReplace", "[", 
+         RowBox[{
+          RowBox[{"file", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{"\"\<\\\\\>\"", "\[Rule]", "\"\</\>\""}]}], "]"}], "<>", 
+        "\"\<')\>\""}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"images", "=", 
+      RowBox[{"ExternalEvaluate", "[", 
+       RowBox[{"py", ",", "\"\<images\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"DeleteFile", "[", "file", "]"}], ";", "\[IndentingNewLine]", 
+     "images"}]}], "\[IndentingNewLine]", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.789492816137601*^9, 3.7894928794429398`*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"f7460ff1-91ec-4635-913c-7568109e5a8c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["code", "Subsubsection",
+ CellChangeTimes->{{3.789492794439781*^9, 
+  3.789492794751795*^9}},ExpressionUUID->"dc51df2b-7e1c-4413-9b55-\
+489cc861c3f0"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"urls", "=", 
+  RowBox[{"{", "\[IndentingNewLine]", 
+   RowBox[{
+   "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200121-sitrep-1-2019-ncov.pdf\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200122-sitrep-2-2019-ncov.pdf\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200123-sitrep-3-2019-ncov.pdf\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200124-sitrep-4-2019-ncov.pdf\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200125-sitrep-5-2019-ncov.pdf\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200126-sitrep-6-2019--ncov.pdf\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200127-sitrep-7-2019--ncov.pdf\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200128-sitrep-8-ncov-cleared.pdf\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200129-sitrep-9-ncov-v2.pdf\>\"", ",", "\[IndentingNewLine]", 
+    "\"\<https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200130-sitrep-10-ncov.pdf\>\""}], "\[IndentingNewLine]", 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.789492757577394*^9, 3.789492768311796*^9}, {
+  3.789492903132804*^9, 3.78949305620846*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"0bfcf1d1-f2f6-4e34-93d0-c45fb8293242"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200121-sitrep-1-2019-ncov.pdf\"\>", 
+   ",", "\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200122-sitrep-2-2019-ncov.pdf\"\>", 
+   ",", "\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200123-sitrep-3-2019-ncov.pdf\"\>", 
+   ",", "\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200124-sitrep-4-2019-ncov.pdf\"\>", 
+   ",", "\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200125-sitrep-5-2019-ncov.pdf\"\>", 
+   ",", "\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200126-sitrep-6-2019--ncov.pdf\"\>", 
+   ",", "\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200127-sitrep-7-2019--ncov.pdf\"\>", 
+   ",", "\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200128-sitrep-8-ncov-cleared.pdf\"\>", 
+   ",", "\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200129-sitrep-9-ncov-v2.pdf\"\>", 
+   ",", "\<\"https://www.who.int/docs/default-source/coronaviruse/situation-\
+reports/20200130-sitrep-10-ncov.pdf\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.7894927695898457`*^9, 3.789493058442544*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"0475f7ae-3af1-4a11-922e-b564551b2e18"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{"pdf2images", "/@", "urls"}], ")"}], "[", 
+  RowBox[{"[", 
+   RowBox[{"All", ",", "1"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7894928922564073`*^9, 3.7894928961635528`*^9}, {
+  3.789493064986784*^9, 3.789493067736885*^9}, {3.78949329010487*^9, 
+  3.7894932935109916`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"718e8341-87b6-4a27-a208-3efe53dbd14c"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{959, 1012},
+WindowMargins->{{Automatic, -5}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (January 29, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"81d8d94e-cba3-405c-9a1d-2f4158aa4509"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 150, 3, 98, "Title",ExpressionUUID->"4bff123a-a11d-4fed-aa04-04d5c62729e1"],
+Cell[733, 27, 167, 3, 53, "Subtitle",ExpressionUUID->"ed07eda3-6be5-4624-8a6f-2e99f58d68a9"],
+Cell[903, 32, 220, 5, 34, "Text",ExpressionUUID->"7023025c-3c8c-4667-b0ad-854b0be980a6"],
+Cell[1126, 39, 498, 11, 31, "Item",ExpressionUUID->"402e9757-4516-47c7-bc63-9f0ce4e70737"],
+Cell[CellGroupData[{
+Cell[1649, 54, 159, 3, 44, "Subsubsection",ExpressionUUID->"348af0f5-3113-44e8-ba79-f1a792f7c15b"],
+Cell[1811, 59, 419, 11, 28, "Input",ExpressionUUID->"62e34e08-9c8d-4bce-8fbe-0927b6b7d937"],
+Cell[2233, 72, 1720, 43, 203, "Input",ExpressionUUID->"f7460ff1-91ec-4635-913c-7568109e5a8c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3990, 120, 155, 3, 44, "Subsubsection",ExpressionUUID->"dc51df2b-7e1c-4413-9b55-489cc861c3f0"],
+Cell[CellGroupData[{
+Cell[4170, 127, 1787, 27, 242, "Input",ExpressionUUID->"0bfcf1d1-f2f6-4e34-93d0-c45fb8293242"],
+Cell[5960, 156, 1443, 23, 207, "Output",ExpressionUUID->"0475f7ae-3af1-4a11-922e-b564551b2e18"]
+}, Open  ]],
+Cell[7418, 182, 411, 9, 28, "Input",ExpressionUUID->"718e8341-87b6-4a27-a208-3efe53dbd14c"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
