@@ -27,3 +27,7 @@ Log plot of confirmed cases of the Coronavirus
 ### Images
 
 ![Image of Coronavirus](coronavirus.png)
+
+GitHub topic wordcloud for Coronavirus:
+
+![Image of GitHub topic wordcloud](github-topic-wordcloud.png)
