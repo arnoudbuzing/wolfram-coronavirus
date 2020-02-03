@@ -31,3 +31,16 @@ Log plot of confirmed cases of the Coronavirus
 GitHub topic wordcloud for Coronavirus:
 
 ![Image of GitHub topic wordcloud](github-topic-wordcloud.png)
+
+### 3D Models
+
+Protease ribbon (source: https://3dprint.nih.gov/discover/3DPX-012893):
+
+![Image of protease ribbon](ribbon.png)
+
+Protease surface (same source):
+
+![Image of protease surface](surface.png)
+
+
+
