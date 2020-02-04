@@ -7,6 +7,8 @@ Wolfram Language code and notebooks related to the coronavirus outbreak
 #### Sources
 
 * [Epidemic data for novel coronavirus 2019-nCoV from Wuhan, China](https://datarepository.wolframcloud.com/resources/Epidemic-data-for-novel-coronavirus-2019-nCoV-from-Wuhan-China)
+* [Mapping Wuhan coronavirus outbreak (2019-nCoV)](https://community.wolfram.com/groups/-/m/t/1868945)
+
 
 ## Results
 
