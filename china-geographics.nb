@@ -10,20 +10,21 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    514912,       8930]
-NotebookOptionsPosition[    513120,       8890]
-NotebookOutlinePosition[    513836,       8912]
-CellTagsIndexPosition[    513793,       8909]
+NotebookDataLength[    515685,       8949]
+NotebookOptionsPosition[    513668,       8905]
+NotebookOutlinePosition[    514384,       8927]
+CellTagsIndexPosition[    514341,       8924]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell["Template geographical plot for China, including Taiwan", "Title",
+Cell["Choropleths for 2019-nCov", "Title",
  CellChangeTimes->{{3.7898171894392033`*^9, 3.789817190311244*^9}, {
   3.7898172253044195`*^9, 3.7898172388812776`*^9}, {3.789819390460479*^9, 
-  3.789819394163619*^9}},ExpressionUUID->"3f0fff91-b6c8-4806-ab84-\
+  3.789819394163619*^9}, {3.789821896526417*^9, 
+  3.7898219132709255`*^9}},ExpressionUUID->"3f0fff91-b6c8-4806-ab84-\
 c1a5ec53a6e7"],
 
 Cell[CellGroupData[{
@@ -402,7 +403,8 @@ cde038f9b91a"],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"makeplot", "[", "list_", "]"}], ":=", 
+  RowBox[{"makeplot", "[", 
+   RowBox[{"list_", ",", "date_"}], "]"}], ":=", 
   RowBox[{"GeoGraphics", "[", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"Map", "[", 
@@ -450,8 +452,8 @@ Cell[BoxData[
       RowBox[{
        RowBox[{"Style", "[", 
         RowBox[{
-        "\"\<2019-nCov\\nconfirmed cases\\nFebruary 3, 2020\>\"", ",", "16"}],
-         "]"}], ",", 
+         RowBox[{"\"\<2019-nCov\\nconfirmed cases\\n\>\"", "<>", 
+          RowBox[{"DateString", "[", "date", "]"}]}], ",", "16"}], "]"}], ",", 
        RowBox[{"Scaled", "[", 
         RowBox[{"{", 
          RowBox[{".25", ",", ".25"}], "}"}], "]"}]}], "]"}]}]}], 
@@ -464,8 +466,9 @@ Cell[BoxData[
   3.78981659349955*^9, 3.7898166813427877`*^9}, {3.789819415782426*^9, 
   3.789819516224172*^9}, {3.789819554805365*^9, 3.789819584210462*^9}, {
   3.789819618716736*^9, 3.7898197327108717`*^9}, {3.7898201844090195`*^9, 
-  3.7898203281756144`*^9}},
- CellLabel->"In[40]:=",ExpressionUUID->"2cdfe25f-79f3-419b-a92e-148d9ea51b93"],
+  3.7898203281756144`*^9}, {3.7898212307142096`*^9, 
+  3.789821244159632*^9}},ExpressionUUID->"2cdfe25f-79f3-419b-a92e-\
+148d9ea51b93"],
 
 Cell[CellGroupData[{
 
@@ -8868,6 +8871,18 @@ CZ/Z81Swh8TrnuT/A3h5drA=
 Cell[CellGroupData[{
 
 Cell[BoxData[
+ RowBox[{"DateString", "[", "Today", "]"}]], "Input",
+ CellChangeTimes->{{3.7898212091085196`*^9, 3.789821213509656*^9}},
+ CellLabel->"In[56]:=",ExpressionUUID->"f795fc4f-581a-4656-a951-02aaac74b72f"],
+
+Cell[BoxData["\<\"Tue 4 Feb 2020\"\>"], "Output",
+ CellChangeTimes->{3.789821213871668*^9},
+ CellLabel->"Out[56]=",ExpressionUUID->"f11c444a-c7ac-4a6b-ba88-8418b050d1f4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
  RowBox[{"Export", "[", 
   RowBox[{
   "\"\<D:\\\\git\\\\wolfram-coronavirus\\\\confirmed-cases-02032020.png\>\"", 
@@ -8912,24 +8927,28 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 298, 4, 160, "Title",ExpressionUUID->"3f0fff91-b6c8-4806-ab84-c1a5ec53a6e7"],
+Cell[580, 22, 320, 5, 98, "Title",ExpressionUUID->"3f0fff91-b6c8-4806-ab84-c1a5ec53a6e7"],
 Cell[CellGroupData[{
-Cell[903, 30, 338, 8, 28, "Input",ExpressionUUID->"851462d9-dcae-4f65-9261-58720dc3e23d"],
-Cell[1244, 40, 425, 10, 23, "Message",ExpressionUUID->"73d12a08-37de-4081-88a0-3e70c2afcdcb"]
+Cell[925, 31, 338, 8, 28, "Input",ExpressionUUID->"851462d9-dcae-4f65-9261-58720dc3e23d"],
+Cell[1266, 41, 425, 10, 23, "Message",ExpressionUUID->"73d12a08-37de-4081-88a0-3e70c2afcdcb"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[1706, 55, 1547, 37, 69, "Input",ExpressionUUID->"2abb810b-9124-45ba-a136-7a5ca5b7dddf"],
-Cell[3256, 94, 12650, 290, 202, "Output",ExpressionUUID->"1a8cd661-a32f-4b66-8579-f5a59216d070"]
+Cell[1728, 56, 1547, 37, 69, "Input",ExpressionUUID->"2abb810b-9124-45ba-a136-7a5ca5b7dddf"],
+Cell[3278, 95, 12650, 290, 202, "Output",ExpressionUUID->"1a8cd661-a32f-4b66-8579-f5a59216d070"]
 }, Open  ]],
-Cell[15921, 387, 463, 13, 28, "Input",ExpressionUUID->"ed201f0f-6ff9-4db0-9f4f-cde038f9b91a"],
-Cell[16387, 402, 2727, 65, 135, "Input",ExpressionUUID->"2cdfe25f-79f3-419b-a92e-148d9ea51b93"],
+Cell[15943, 388, 463, 13, 28, "Input",ExpressionUUID->"ed201f0f-6ff9-4db0-9f4f-cde038f9b91a"],
+Cell[16409, 403, 2829, 67, 135, "Input",ExpressionUUID->"2cdfe25f-79f3-419b-a92e-148d9ea51b93"],
 Cell[CellGroupData[{
-Cell[19139, 471, 213, 3, 28, "Input",ExpressionUUID->"24330708-c5a6-49b2-93b2-4c95ac341b71"],
-Cell[19355, 476, 492966, 8388, 705, "Output",ExpressionUUID->"5af69808-45ce-420a-80a6-06580651e8ad"]
+Cell[19263, 474, 213, 3, 28, "Input",ExpressionUUID->"24330708-c5a6-49b2-93b2-4c95ac341b71"],
+Cell[19479, 479, 492966, 8388, 705, "Output",ExpressionUUID->"5af69808-45ce-420a-80a6-06580651e8ad"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[512358, 8869, 510, 12, 48, "Input",ExpressionUUID->"f626d2d3-a73a-4312-9aab-3191436c99d3"],
-Cell[512871, 8883, 221, 3, 32, "Output",ExpressionUUID->"eb386e9f-76a4-4455-b024-3b0c5e29dedf"]
+Cell[512482, 8872, 214, 3, 28, "Input",ExpressionUUID->"f795fc4f-581a-4656-a951-02aaac74b72f"],
+Cell[512699, 8877, 170, 2, 32, "Output",ExpressionUUID->"f11c444a-c7ac-4a6b-ba88-8418b050d1f4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[512906, 8884, 510, 12, 48, "Input",ExpressionUUID->"f626d2d3-a73a-4312-9aab-3191436c99d3"],
+Cell[513419, 8898, 221, 3, 32, "Output",ExpressionUUID->"eb386e9f-76a4-4455-b024-3b0c5e29dedf"]
 }, Open  ]]
 }, Open  ]]
 }
