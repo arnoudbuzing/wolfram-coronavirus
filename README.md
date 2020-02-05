@@ -34,6 +34,8 @@ Confirmed cases for 2/3/2020:
 
 ![Image of Coronavirus](coronavirus.png)
 
+![Another image of Coronavirus](coronavirus-2.png)
+
 GitHub topic wordcloud for Coronavirus:
 
 ![Image of GitHub topic wordcloud](github-topic-wordcloud.png)
