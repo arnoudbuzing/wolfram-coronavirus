@@ -27,9 +27,9 @@ Log plot of confirmed cases of the Coronavirus
 
 ![Log plot of confirmed cases of the Coronavirus](images/confirmed-cases-log.png)
 
-Confirmed cases for 2/3/2020:
+Confirmed cases for 2/4/2020:
 
-![Confirmed cases for 2/3/2020](images/confirmed-cases-02032020.png)
+![Confirmed cases for 2/4/2020](images/confirmed-cases-02042020.png)
 
 ### Images
 
