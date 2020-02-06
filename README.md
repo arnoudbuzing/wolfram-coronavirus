@@ -15,41 +15,41 @@ Wolfram Language code and notebooks related to the coronavirus outbreak
 
 ### Animation of global spread of Coronavirus
 
-![Animation of global spread of Coronavirus](out.gif)
+![Animation of global spread of Coronavirus](images/out.gif)
 
 ### Confirmed cases
 
 Plot of confirmed cases of the Coronavirus
 
-![Plot of confirmed cases of the Coronavirus](confirmed-cases.png)
+![Plot of confirmed cases of the Coronavirus](images/confirmed-cases.png)
 
 Log plot of confirmed cases of the Coronavirus
 
-![Log plot of confirmed cases of the Coronavirus](confirmed-cases-log.png)
+![Log plot of confirmed cases of the Coronavirus](images/confirmed-cases-log.png)
 
 Confirmed cases for 2/3/2020:
 
-![Confirmed cases for 2/3/2020](confirmed-cases-02032020.png)
+![Confirmed cases for 2/3/2020](images/confirmed-cases-02032020.png)
 
 ### Images
 
-![Image of Coronavirus](coronavirus.png)
+![Image of Coronavirus](images/coronavirus.png)
 
-![Another image of Coronavirus](coronavirus-2.png)
+![Another image of Coronavirus](images/coronavirus-2.png)
 
 GitHub topic wordcloud for Coronavirus:
 
-![Image of GitHub topic wordcloud](github-topic-wordcloud.png)
+![Image of GitHub topic wordcloud](images/github-topic-wordcloud.png)
 
 ### 3D Models
 
 Protease ribbon (source: https://3dprint.nih.gov/discover/3DPX-012893):
 
-![Image of protease ribbon](ribbon.png)
+![Image of protease ribbon](images/ribbon.png)
 
 Protease surface (same source):
 
-![Image of protease surface](surface.png)
+![Image of protease surface](images/surface.png)
 
 
 
