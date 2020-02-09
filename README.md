@@ -1,5 +1,7 @@
 # Coronavirus
 
+![Coronavirus surface details](images/ncov-detailed.png)
+
 Wolfram Language code and notebooks related to the coronavirus outbreak
 
 [![View notebooks](https://wolfr.am/HAAhzkRq)](https://wolfr.am/JZNRriEE)
