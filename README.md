@@ -29,6 +29,8 @@ Posts on the Wolfram Community:
 
 ### Index to notebooks 
 
+| file | description |
+| --- | --- |
 | Electron-microscope-image.nb | imports an image of a cell surrounded by multiple coronoviruses |
 | ExternalIdentifier-Coronavirus.nb	| exploration of WikiData topics related to coronavirus |
 | GeoBubbleChart-Analysis.nb | analysis of virus spread in China itself |
