@@ -8,10 +8,24 @@ Wolfram Language code and notebooks related to the coronavirus outbreak
 
 #### Sources
 
-* [Watch a recording of my live Twitch session, showing how to create the notebooks in this repository](https://www.twitch.tv/videos/547321229)
-* [Epidemic data for novel coronavirus 2019-nCoV from Wuhan, China](https://datarepository.wolframcloud.com/resources/Epidemic-data-for-novel-coronavirus-2019-nCoV-from-Wuhan-China)
-* [Mapping Wuhan coronavirus outbreak (2019-nCoV)](https://community.wolfram.com/groups/-/m/t/1868945)
+Twitch live streams:
 
+* [Recording of my live Twitch session](https://www.twitch.tv/videos/547321229)
+* [Coronavirus Data Exploration - Wolfram Livecoding with Students](https://www.twitch.tv/videos/548254391)
+
+Wolfram Data Repository (datasets):
+
+* [Top level search](https://datarepository.wolframcloud.com/search/?i=coronavirus)
+* [Genetic Sequences for Novel Coronavirus 2019-nCoV from Wuhan, China](https://datarepository.wolframcloud.com/resources/Genetic-Sequences-for-Novel-Coronavirus-2019-nCoV-from-Wuhan-China)
+* [Epidemic Data for Novel Coronavirus 2019-nCoV from Wuhan, China](https://datarepository.wolframcloud.com/resources/Epidemic-Data-for-Novel-Coronavirus-2019-nCoV-from-Wuhan-China)
+* [Patient Medical Data for Novel Coronavirus 2019-nCoV from Wuhan, China](https://datarepository.wolframcloud.com/resources/Patient-Medical-Data-for-Novel-Coronavirus-2019-nCoV-from-Wuhan-China)
+
+Posts on the Wolfram Community:
+
+* [UPDATES -- Resources For Novel Coronavirus 2019-nCoV Wuhan China](https://community.wolfram.com/groups/-/m/t/1872608)
+* [Genome analysis and the 2019-nCov](https://community.wolfram.com/groups/-/m/t/1874816)
+* [Visualizing Sequence Alignments from the 2019-nCov](https://community.wolfram.com/groups/-/m/t/1875352)
+* [Mapping Wuhan coronavirus outbreak (2019-nCoV)](https://community.wolfram.com/groups/-/m/t/1868945)
 
 ## Results
 
