@@ -1,0 +1,1345 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     66175,       1335]
+NotebookOptionsPosition[     65010,       1306]
+NotebookOutlinePosition[     65417,       1322]
+CellTagsIndexPosition[     65374,       1319]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"objects", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"ResourceSearch", "[", "\"\<coronavirus\>\"", "]"}], "[", 
+     RowBox[{"All", ",", "\"\<ResourceObject\>\""}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Map", "[", 
+   RowBox[{"DeleteObject", ",", "objects"}], "]"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"ds1", ",", "ds2", ",", "ds3"}], "}"}], "=", 
+   RowBox[{"Map", "[", 
+    RowBox[{"ResourceData", ",", "objects"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"objects", "//", "Column"}]}], "Input",
+ CellChangeTimes->{{3.7900170772059884`*^9, 3.790017221326255*^9}, {
+  3.7900172549232426`*^9, 3.7900173009995966`*^9}, {3.790017392628293*^9, 
+  3.790017402802594*^9}, {3.7900174736856422`*^9, 3.790017474931676*^9}},
+ CellLabel->"In[70]:=",ExpressionUUID->"ad681be8-dff2-4d3b-8e2d-a7db5da35da2"],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {
+     InterpretationBox[
+      RowBox[{
+       TagBox["ResourceObject",
+        "SummaryHead"], "[", 
+       DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+        "Ready"}, 
+        TemplateBox[{
+          PaneSelectorBox[{False -> GridBox[{{
+                PaneBox[
+                 ButtonBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "SquarePlusIconMedium"]], 
+                  ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                  None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                 Alignment -> {Center, Center}, ImageSize -> 
+                 Dynamic[{
+                   Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                GraphicsBox[{
+                  Thickness[0.011111111111111112`], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    3.789, 7.266}, {86.20700000000001, 7.266}, {
+                    86.20700000000001, 3.266}, {3.789, 3.266}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    14.129, 54.07}, {19.878999999999998`, 54.07}, {
+                    19.878999999999998`, 15.57}, {14.129, 15.57}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    24.129, 41.82}, {29.879, 41.82}, {29.879, 15.57}, {24.129,
+                     15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    33.160000000000004`, 54.07}, {38.910000000000004`, 
+                    54.07}, {38.910000000000004`, 15.57}, {
+                    33.160000000000004`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    42.191, 31.781}, {47.941, 31.781}, {47.941, 
+                    15.569999999999997`}, {42.191, 15.569999999999997`}}}], 
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    51.223000000000006`, 46.875}, {56.973000000000006`, 
+                    46.875}, {56.973000000000006`, 15.57}, {
+                    51.223000000000006`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    60.254, 37.707}, {66.00399999999999, 37.707}, {
+                    66.00399999999999, 15.569999999999997`}, {60.254, 
+                    15.569999999999997`}}}]}, {
+                    FaceForm[
+                    RGBColor[0.274612, 0.618881, 0.810913, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    70.12899999999999, 54.07}, {75.87899999999999, 54.07}, {
+                    75.87899999999999, 15.57}, {70.12899999999999, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.879000000000001, 60.547}, {24.129, 60.547}, {24.129, 
+                    56.547}, {9.879000000000001, 56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.871, 13.097999999999999`}, {80.121, 
+                    13.097999999999999`}, {80.121, 9.097999999999999}, {9.871,
+                     9.097999999999999}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    65.87899999999999, 60.547}, {80.12899999999999, 60.547}, {
+                    80.12899999999999, 56.547}, {65.87899999999999, 
+                    56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1,
+                     0}, {0, 1, 0}, {0, 1, 0}}}, {{{11.469000000000001`, 
+                    66.54700000000001}, {45., 82.418}, {78.398, 
+                    66.54700000000001}}, {{45., 86.73400000000001}, {
+                    2.2230000000000003`, 66.54700000000001}, {
+                    2.2230000000000003`, 62.547}, {87.777, 62.547}, {87.777, 
+                    66.54700000000001}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False]}, AspectRatio -> 1, Axes -> False, 
+                 Background -> None, Frame -> None, FrameTicks -> None, 
+                 ImageSize -> 
+                 Dynamic[{
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"Genetic Sequences for Novel Coronavirus 2019-nCoV from \
+Wuhan, China\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://datarepository.wolframcloud.com/resources/\
+8738b472-f1d1-462b-ac34-e9684a4dc088"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                   TagBox["\"\"", "SummaryItem"]}, {
+                   RowBox[{
+                    TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"DataResource\"", "SummaryItem"]}], 
+                   "\[SpanFromLeft]"}, {
+                   TagBox[
+                    DynamicModuleBox[{ResourceSystemClient`Private`len$$ = 1}, 
+                    RowBox[{
+                    TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    ButtonBox[
+                    DynamicBox[
+                    ToBoxes[
+                    Replace[
+                    ResourceSystemClient`Private`snipDots[
+                    "Various DNA sequences of the Novel Coronavirus 2019-nCoV \
+including location, collection time, and similar supporting data", 
+                    ResourceSystemClient`Private`len$$], Except[
+                    Blank[String]] -> 
+                    Snippet[
+                    "Various DNA sequences of the Novel Coronavirus 2019-nCoV \
+including location, collection time, and similar supporting data", 
+                    ResourceSystemClient`Private`len$$], {0}], StandardForm]],
+                     ButtonFunction :> (ResourceSystemClient`Private`len$$ = 
+                    Ceiling[ResourceSystemClient`Private`len$$ 1.5]), 
+                    Appearance -> None, BaseStyle -> {}, Evaluator -> 
+                    Automatic, Method -> "Preemptive"], "SummaryItem"]}], 
+                    DynamicModuleValues :> {}], "SummaryItem"], 
+                   "\[SpanFromLeft]"}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}], True -> GridBox[{{
+                PaneBox[
+                 ButtonBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "SquareMinusIconMedium"]], 
+                  ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                  None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                 Alignment -> {Center, Center}, ImageSize -> 
+                 Dynamic[{
+                   Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                GraphicsBox[{
+                  Thickness[0.011111111111111112`], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    3.789, 7.266}, {86.20700000000001, 7.266}, {
+                    86.20700000000001, 3.266}, {3.789, 3.266}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    14.129, 54.07}, {19.878999999999998`, 54.07}, {
+                    19.878999999999998`, 15.57}, {14.129, 15.57}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    24.129, 41.82}, {29.879, 41.82}, {29.879, 15.57}, {24.129,
+                     15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    33.160000000000004`, 54.07}, {38.910000000000004`, 
+                    54.07}, {38.910000000000004`, 15.57}, {
+                    33.160000000000004`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    42.191, 31.781}, {47.941, 31.781}, {47.941, 
+                    15.569999999999997`}, {42.191, 15.569999999999997`}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    51.223000000000006`, 46.875}, {56.973000000000006`, 
+                    46.875}, {56.973000000000006`, 15.57}, {
+                    51.223000000000006`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    60.254, 37.707}, {66.00399999999999, 37.707}, {
+                    66.00399999999999, 15.569999999999997`}, {60.254, 
+                    15.569999999999997`}}}]}, {
+                    FaceForm[
+                    RGBColor[0.274612, 0.618881, 0.810913, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    70.12899999999999, 54.07}, {75.87899999999999, 54.07}, {
+                    75.87899999999999, 15.57}, {70.12899999999999, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.879000000000001, 60.547}, {24.129, 60.547}, {24.129, 
+                    56.547}, {9.879000000000001, 56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.871, 13.097999999999999`}, {80.121, 
+                    13.097999999999999`}, {80.121, 9.097999999999999}, {9.871,
+                     9.097999999999999}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    65.87899999999999, 60.547}, {80.12899999999999, 60.547}, {
+                    80.12899999999999, 56.547}, {65.87899999999999, 
+                    56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1,
+                     0}, {0, 1, 0}, {0, 1, 0}}}, {{{11.469000000000001`, 
+                    66.54700000000001}, {45., 82.418}, {78.398, 
+                    66.54700000000001}}, {{45., 86.73400000000001}, {
+                    2.2230000000000003`, 66.54700000000001}, {
+                    2.2230000000000003`, 62.547}, {87.777, 62.547}, {87.777, 
+                    66.54700000000001}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False]}, AspectRatio -> 1, Axes -> False, 
+                 Background -> None, Frame -> None, FrameTicks -> None, 
+                 ImageSize -> 
+                 Dynamic[{
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"Genetic Sequences for Novel Coronavirus 2019-nCoV from \
+Wuhan, China\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://datarepository.wolframcloud.com/resources/\
+8738b472-f1d1-462b-ac34-e9684a4dc088"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                   TagBox["\"\"", "SummaryItem"]}, {
+                   RowBox[{
+                    TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"DataResource\"", "SummaryItem"]}], 
+                   "\[SpanFromLeft]"}, {
+                   TagBox[
+                    DynamicModuleBox[{ResourceSystemClient`Private`len$$ = 1}, 
+                    RowBox[{
+                    TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    ButtonBox[
+                    DynamicBox[
+                    ToBoxes[
+                    Replace[
+                    ResourceSystemClient`Private`snipDots[
+                    "Various DNA sequences of the Novel Coronavirus 2019-nCoV \
+including location, collection time, and similar supporting data", 
+                    ResourceSystemClient`Private`len$$], Except[
+                    Blank[String]] -> 
+                    Snippet[
+                    "Various DNA sequences of the Novel Coronavirus 2019-nCoV \
+including location, collection time, and similar supporting data", 
+                    ResourceSystemClient`Private`len$$], {0}], StandardForm]],
+                     ButtonFunction :> (ResourceSystemClient`Private`len$$ = 
+                    Ceiling[ResourceSystemClient`Private`len$$ 1.5]), 
+                    Appearance -> None, BaseStyle -> {}, Evaluator -> 
+                    Automatic, Method -> "Preemptive"], "SummaryItem"]}], 
+                    DynamicModuleValues :> {}], "SummaryItem"], 
+                   "\[SpanFromLeft]"}, {
+                   RowBox[{
+                    TagBox["\"Categories: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"Health\"", "\"Healthcare\"", 
+                    "\"Life Science\"", "\"Medicine\""}, "RowWithSeparators"],
+                     Short], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"ContentTypes: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"Geospatial Data\"", "\"Text\"", 
+                    "\"Time Series\""}, "RowWithSeparators"], Short], 
+                    "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Keywords: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"Coronavirus\"", "\"Wuhan\"", 
+                    "\"Genetics\"", "\"Epidemic\"", "\"Outbreak\"", 
+                    "\"Sequence Comparison\"", "\"Corona\"", "\"2019-ncov\"", 
+                    "\"cov-2019\"", "\"nCoV2019\"", "\"2019nCoV\"", 
+                    "\"2019 nCoV\"", "\"Novel Coronavirus\"", 
+                    "\"Wuhan Coronavirus\"", "\"China\"", "\"Virus\"", 
+                    "\"Disease\"", "\"Epidemiology\"", "\"Public Health\""}, 
+                    "RowWithSeparators"], Short], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Documentation: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"https://datarepository.wolframcloud.com/resources/\
+8738b472-f1d1-462b-ac34-e9684a4dc088\"", 
+                    "https://datarepository.wolframcloud.com/resources/\
+8738b472-f1d1-462b-ac34-e9684a4dc088"}, "HyperlinkURL"], "SummaryItem"]}], 
+                   ""}, {
+                   RowBox[{
+                    TagBox["\"Data Location: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    DynamicModuleBox[{
+                    ResourceSystemClient`Private`typesetstorage$$ = 
+                    ResourceSystemClient`Private`typesetstorageLocation, 
+                    ResourceSystemClient`Private`info$$}, 
+                    DynamicBox[
+                    ToBoxes[
+                    ResourceSystemClient`Private`info$$ = 
+                    ResourceSystemClient`Private`resourceInfo[
+                    "8738b472-f1d1-462b-ac34-e9684a4dc088"]; If[
+                    AssociationQ[ResourceSystemClient`Private`info$$], 
+                    ResourceSystemClient`Private`typesetstorage$$[
+                    Lookup[
+                    ResourceSystemClient`Private`info$$, 
+                    "ContentElementLocations", None]], 
+                    Missing["NotAvailable"]], StandardForm]], 
+                    DynamicModuleValues :> {}], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"8738b472-f1d1-462b-ac34-e9684a4dc088\"", 
+                    "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"3.0.0\"", "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Size: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TemplateBox[{
+                    "663.368`", "\"kB\"", "kilobytes", "\"Kilobytes\""}, 
+                    "Quantity", SyntaxForm -> Mod], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Elements: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"AffectedCountries\"", 
+                    "\"CollectionTimeline\"", "\"Dataset\"", 
+                    "\"ReleaseTimeline\""}, "RowWithSeparators"], 
+                    Short[#, 2]& ], "SummaryItem"]}], ""}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}]}, 
+           Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+         "SummaryPanel"],
+        DynamicModuleValues:>{}], "]"}],
+      ResourceObject[
+       Association[
+       "Name" -> 
+        "Genetic Sequences for Novel Coronavirus 2019-nCoV from Wuhan, China",
+         "UUID" -> "8738b472-f1d1-462b-ac34-e9684a4dc088", "ResourceType" -> 
+        "DataResource", "Version" -> "3.0.0", "Description" -> 
+        "Various DNA sequences of the Novel Coronavirus 2019-nCoV including \
+location, collection time, and similar supporting data", "RepositoryLocation" -> 
+        URL["https://www.wolframcloud.com/objects/resourcesystem/api/1.0"], 
+        "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+        Quantity[663.368, "Kilobytes"], 
+        "ContentElements" -> {
+         "AffectedCountries", "CollectionTimeline", "Dataset", 
+          "ReleaseTimeline"}]],
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False]},
+    {
+     InterpretationBox[
+      RowBox[{
+       TagBox["ResourceObject",
+        "SummaryHead"], "[", 
+       DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+        "Ready"}, 
+        TemplateBox[{
+          PaneSelectorBox[{False -> GridBox[{{
+                PaneBox[
+                 ButtonBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "SquarePlusIconMedium"]], 
+                  ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                  None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                 Alignment -> {Center, Center}, ImageSize -> 
+                 Dynamic[{
+                   Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                GraphicsBox[{
+                  Thickness[0.011111111111111112`], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    3.789, 7.266}, {86.20700000000001, 7.266}, {
+                    86.20700000000001, 3.266}, {3.789, 3.266}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    14.129, 54.07}, {19.878999999999998`, 54.07}, {
+                    19.878999999999998`, 15.57}, {14.129, 15.57}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    24.129, 41.82}, {29.879, 41.82}, {29.879, 15.57}, {24.129,
+                     15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    33.160000000000004`, 54.07}, {38.910000000000004`, 
+                    54.07}, {38.910000000000004`, 15.57}, {
+                    33.160000000000004`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    42.191, 31.781}, {47.941, 31.781}, {47.941, 
+                    15.569999999999997`}, {42.191, 15.569999999999997`}}}], 
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    51.223000000000006`, 46.875}, {56.973000000000006`, 
+                    46.875}, {56.973000000000006`, 15.57}, {
+                    51.223000000000006`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    60.254, 37.707}, {66.00399999999999, 37.707}, {
+                    66.00399999999999, 15.569999999999997`}, {60.254, 
+                    15.569999999999997`}}}]}, {
+                    FaceForm[
+                    RGBColor[0.274612, 0.618881, 0.810913, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    70.12899999999999, 54.07}, {75.87899999999999, 54.07}, {
+                    75.87899999999999, 15.57}, {70.12899999999999, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.879000000000001, 60.547}, {24.129, 60.547}, {24.129, 
+                    56.547}, {9.879000000000001, 56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.871, 13.097999999999999`}, {80.121, 
+                    13.097999999999999`}, {80.121, 9.097999999999999}, {9.871,
+                     9.097999999999999}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    65.87899999999999, 60.547}, {80.12899999999999, 60.547}, {
+                    80.12899999999999, 56.547}, {65.87899999999999, 
+                    56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1,
+                     0}, {0, 1, 0}, {0, 1, 0}}}, {{{11.469000000000001`, 
+                    66.54700000000001}, {45., 82.418}, {78.398, 
+                    66.54700000000001}}, {{45., 86.73400000000001}, {
+                    2.2230000000000003`, 66.54700000000001}, {
+                    2.2230000000000003`, 62.547}, {87.777, 62.547}, {87.777, 
+                    66.54700000000001}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False]}, AspectRatio -> 1, Axes -> False, 
+                 Background -> None, Frame -> None, FrameTicks -> None, 
+                 ImageSize -> 
+                 Dynamic[{
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"Epidemic Data for Novel Coronavirus 2019-nCoV from \
+Wuhan, China\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://datarepository.wolframcloud.com/resources/\
+dba89a96-2b3a-4254-8824-cb1f9e01a94b"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                   TagBox["\"\"", "SummaryItem"]}, {
+                   RowBox[{
+                    TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"DataResource\"", "SummaryItem"]}], 
+                   "\[SpanFromLeft]"}, {
+                   RowBox[{
+                    TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Estimated cases of novel coronavirus infection by \
+country or region\"", "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}], True -> GridBox[{{
+                PaneBox[
+                 ButtonBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "SquareMinusIconMedium"]], 
+                  ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                  None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                 Alignment -> {Center, Center}, ImageSize -> 
+                 Dynamic[{
+                   Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                GraphicsBox[{
+                  Thickness[0.011111111111111112`], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    3.789, 7.266}, {86.20700000000001, 7.266}, {
+                    86.20700000000001, 3.266}, {3.789, 3.266}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    14.129, 54.07}, {19.878999999999998`, 54.07}, {
+                    19.878999999999998`, 15.57}, {14.129, 15.57}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    24.129, 41.82}, {29.879, 41.82}, {29.879, 15.57}, {24.129,
+                     15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    33.160000000000004`, 54.07}, {38.910000000000004`, 
+                    54.07}, {38.910000000000004`, 15.57}, {
+                    33.160000000000004`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    42.191, 31.781}, {47.941, 31.781}, {47.941, 
+                    15.569999999999997`}, {42.191, 15.569999999999997`}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    51.223000000000006`, 46.875}, {56.973000000000006`, 
+                    46.875}, {56.973000000000006`, 15.57}, {
+                    51.223000000000006`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    60.254, 37.707}, {66.00399999999999, 37.707}, {
+                    66.00399999999999, 15.569999999999997`}, {60.254, 
+                    15.569999999999997`}}}]}, {
+                    FaceForm[
+                    RGBColor[0.274612, 0.618881, 0.810913, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    70.12899999999999, 54.07}, {75.87899999999999, 54.07}, {
+                    75.87899999999999, 15.57}, {70.12899999999999, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.879000000000001, 60.547}, {24.129, 60.547}, {24.129, 
+                    56.547}, {9.879000000000001, 56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.871, 13.097999999999999`}, {80.121, 
+                    13.097999999999999`}, {80.121, 9.097999999999999}, {9.871,
+                     9.097999999999999}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    65.87899999999999, 60.547}, {80.12899999999999, 60.547}, {
+                    80.12899999999999, 56.547}, {65.87899999999999, 
+                    56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1,
+                     0}, {0, 1, 0}, {0, 1, 0}}}, {{{11.469000000000001`, 
+                    66.54700000000001}, {45., 82.418}, {78.398, 
+                    66.54700000000001}}, {{45., 86.73400000000001}, {
+                    2.2230000000000003`, 66.54700000000001}, {
+                    2.2230000000000003`, 62.547}, {87.777, 62.547}, {87.777, 
+                    66.54700000000001}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False]}, AspectRatio -> 1, Axes -> False, 
+                 Background -> None, Frame -> None, FrameTicks -> None, 
+                 ImageSize -> 
+                 Dynamic[{
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"Epidemic Data for Novel Coronavirus 2019-nCoV from \
+Wuhan, China\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    
+                    "https://datarepository.wolframcloud.com/resources/\
+dba89a96-2b3a-4254-8824-cb1f9e01a94b"}, "HyperlinkURL"]}, "RowDefault"], 
+                    "SummaryItem"]}], 
+                   TagBox["\"\"", "SummaryItem"]}, {
+                   RowBox[{
+                    TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"DataResource\"", "SummaryItem"]}], 
+                   "\[SpanFromLeft]"}, {
+                   RowBox[{
+                    TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Estimated cases of novel coronavirus infection by \
+country or region\"", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+                   RowBox[{
+                    TagBox["\"Categories: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"Health\"", "\"Healthcare\"", 
+                    "\"Medicine\"", "\"Statistics\""}, "RowWithSeparators"], 
+                    Short], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"ContentTypes: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "\"Time Series\""}, 
+                    "RowWithSeparators"], Short], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Keywords: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"Novel Coronavirus\"", 
+                    "\"Wuhan Coronavirus\"", "\"Coronavirus\"", 
+                    "\"2019-nCoV\"", "\"ncov-2019\"", "\"nCoV-2019\"", 
+                    "\"nCoV2019\"", "\"ncov2019\"", "\"2019nCoV\"", 
+                    "\"2019-ncov\"", "\"2019ncov\"", "\"Corona\"", 
+                    "\"Wuhan\"", "\"virus\"", "\"epidemics\"", "\"epidemic\"",
+                     "\"Infection\"", "\"infectious disease\""}, 
+                    "RowWithSeparators"], Short], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Documentation: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"https://datarepository.wolframcloud.com/resources/\
+dba89a96-2b3a-4254-8824-cb1f9e01a94b\"", 
+                    "https://datarepository.wolframcloud.com/resources/\
+dba89a96-2b3a-4254-8824-cb1f9e01a94b"}, "HyperlinkURL"], "SummaryItem"]}], 
+                   ""}, {
+                   RowBox[{
+                    TagBox["\"Data Location: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    DynamicModuleBox[{
+                    ResourceSystemClient`Private`typesetstorage$$ = 
+                    ResourceSystemClient`Private`typesetstorageLocation, 
+                    ResourceSystemClient`Private`info$$}, 
+                    DynamicBox[
+                    ToBoxes[
+                    ResourceSystemClient`Private`info$$ = 
+                    ResourceSystemClient`Private`resourceInfo[
+                    "dba89a96-2b3a-4254-8824-cb1f9e01a94b"]; If[
+                    AssociationQ[ResourceSystemClient`Private`info$$], 
+                    ResourceSystemClient`Private`typesetstorage$$[
+                    Lookup[
+                    ResourceSystemClient`Private`info$$, 
+                    "ContentElementLocations", None]], 
+                    Missing["NotAvailable"]], StandardForm]], 
+                    DynamicModuleValues :> {}], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"dba89a96-2b3a-4254-8824-cb1f9e01a94b\"", 
+                    "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"5.0.0\"", "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Size: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "805.232`", "\"kB\"", "kilobytes", "\"Kilobytes\""}, 
+                    "Quantity", SyntaxForm -> Mod], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Elements: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "\"Dataset\""}, 
+                    "RowWithSeparators"], Short[#, 2]& ], "SummaryItem"]}], 
+                   ""}}, GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}]}, 
+           Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+         "SummaryPanel"],
+        DynamicModuleValues:>{}], "]"}],
+      ResourceObject[
+       Association[
+       "Name" -> 
+        "Epidemic Data for Novel Coronavirus 2019-nCoV from Wuhan, China", 
+        "UUID" -> "dba89a96-2b3a-4254-8824-cb1f9e01a94b", "ResourceType" -> 
+        "DataResource", "Version" -> "5.0.0", "Description" -> 
+        "Tracking the Wuhan Coronavirus", "RepositoryLocation" -> 
+        URL["https://www.wolframcloud.com/objects/resourcesystem/api/1.0"], 
+        "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+        Quantity[805.232, "Kilobytes"], "ContentElements" -> {"Dataset"}]],
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False]},
+    {
+     InterpretationBox[
+      RowBox[{
+       TagBox["ResourceObject",
+        "SummaryHead"], "[", 
+       DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = 
+        "Ready"}, 
+        TemplateBox[{
+          PaneSelectorBox[{False -> GridBox[{{
+                PaneBox[
+                 ButtonBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "SquarePlusIconMedium"]], 
+                  ButtonFunction :> (Typeset`open$$ = True), Appearance -> 
+                  None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                 Alignment -> {Center, Center}, ImageSize -> 
+                 Dynamic[{
+                   Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                GraphicsBox[{
+                  Thickness[0.011111111111111112`], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    3.789, 7.266}, {86.20700000000001, 7.266}, {
+                    86.20700000000001, 3.266}, {3.789, 3.266}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    14.129, 54.07}, {19.878999999999998`, 54.07}, {
+                    19.878999999999998`, 15.57}, {14.129, 15.57}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    24.129, 41.82}, {29.879, 41.82}, {29.879, 15.57}, {24.129,
+                     15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    33.160000000000004`, 54.07}, {38.910000000000004`, 
+                    54.07}, {38.910000000000004`, 15.57}, {
+                    33.160000000000004`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    42.191, 31.781}, {47.941, 31.781}, {47.941, 
+                    15.569999999999997`}, {42.191, 15.569999999999997`}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    51.223000000000006`, 46.875}, {56.973000000000006`, 
+                    46.875}, {56.973000000000006`, 15.57}, {
+                    51.223000000000006`, 15.57}}}], 
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    60.254, 37.707}, {66.00399999999999, 37.707}, {
+                    66.00399999999999, 15.569999999999997`}, {60.254, 
+                    15.569999999999997`}}}]}, {
+                    FaceForm[
+                    RGBColor[0.274612, 0.618881, 0.810913, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    70.12899999999999, 54.07}, {75.87899999999999, 54.07}, {
+                    75.87899999999999, 15.57}, {70.12899999999999, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.879000000000001, 60.547}, {24.129, 60.547}, {24.129, 
+                    56.547}, {9.879000000000001, 56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.871, 13.097999999999999`}, {80.121, 
+                    13.097999999999999`}, {80.121, 9.097999999999999}, {9.871,
+                     9.097999999999999}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    65.87899999999999, 60.547}, {80.12899999999999, 60.547}, {
+                    80.12899999999999, 56.547}, {65.87899999999999, 
+                    56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1,
+                     0}, {0, 1, 0}, {0, 1, 0}}}, {{{11.469000000000001`, 
+                    66.54700000000001}, {45., 82.418}, {78.398, 
+                    66.54700000000001}}, {{45., 86.73400000000001}, {
+                    2.2230000000000003`, 66.54700000000001}, {
+                    2.2230000000000003`, 62.547}, {87.777, 62.547}, {87.777, 
+                    66.54700000000001}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False]}, AspectRatio -> 1, Axes -> False, 
+                 Background -> None, Frame -> None, FrameTicks -> None, 
+                 ImageSize -> 
+                 Dynamic[{
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"Patient Medical Data for Novel Coronavirus 2019-nCoV \
+from Wuhan, China\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://datarepository.wolframcloud.com/resources/\
+Patient-Medical-Data-for-Novel-Coronavirus-2019-nCoV-from-Wuhan-China"}, 
+                    "HyperlinkURL"]}, "RowDefault"], "SummaryItem"]}], 
+                   TagBox["\"\"", "SummaryItem"]}, {
+                   RowBox[{
+                    TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"DataResource\"", "SummaryItem"]}], 
+                   "\[SpanFromLeft]"}, {
+                   RowBox[{
+                    TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Medical records of patients infected with novel \
+coronavirus\"", "SummaryItem"]}], "\[SpanFromLeft]"}}, 
+                 GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}], True -> GridBox[{{
+                PaneBox[
+                 ButtonBox[
+                  DynamicBox[
+                   FEPrivate`FrontEndResource[
+                   "FEBitmaps", "SquareMinusIconMedium"]], 
+                  ButtonFunction :> (Typeset`open$$ = False), Appearance -> 
+                  None, Evaluator -> Automatic, Method -> "Preemptive"], 
+                 Alignment -> {Center, Center}, ImageSize -> 
+                 Dynamic[{
+                   Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                    AbsoluteCurrentValue[Magnification]}]], 
+                GraphicsBox[{
+                  Thickness[0.011111111111111112`], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    3.789, 7.266}, {86.20700000000001, 7.266}, {
+                    86.20700000000001, 3.266}, {3.789, 3.266}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    14.129, 54.07}, {19.878999999999998`, 54.07}, {
+                    19.878999999999998`, 15.57}, {14.129, 15.57}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    24.129, 41.82}, {29.879, 41.82}, {29.879, 15.57}, {24.129,
+                     15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    33.160000000000004`, 54.07}, {38.910000000000004`, 
+                    54.07}, {38.910000000000004`, 15.57}, {
+                    33.160000000000004`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    42.191, 31.781}, {47.941, 31.781}, {47.941, 
+                    15.569999999999997`}, {42.191, 15.569999999999997`}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    51.223000000000006`, 46.875}, {56.973000000000006`, 
+                    46.875}, {56.973000000000006`, 15.57}, {
+                    51.223000000000006`, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    60.254, 37.707}, {66.00399999999999, 37.707}, {
+                    66.00399999999999, 15.569999999999997`}, {60.254, 
+                    15.569999999999997`}}}]}, {
+                    FaceForm[
+                    RGBColor[0.274612, 0.618881, 0.810913, 1.]]}, 
+                   StripOnInput -> False], 
+                  StyleBox[{
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    70.12899999999999, 54.07}, {75.87899999999999, 54.07}, {
+                    75.87899999999999, 15.57}, {70.12899999999999, 15.57}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.879000000000001, 60.547}, {24.129, 60.547}, {24.129, 
+                    56.547}, {9.879000000000001, 56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    9.871, 13.097999999999999`}, {80.121, 
+                    13.097999999999999`}, {80.121, 9.097999999999999}, {9.871,
+                     9.097999999999999}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{
+                    65.87899999999999, 60.547}, {80.12899999999999, 60.547}, {
+                    80.12899999999999, 56.547}, {65.87899999999999, 
+                    56.547}}}], 
+                    
+                    FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}}, {{0, 2, 0}, {0, 1,
+                     0}, {0, 1, 0}, {0, 1, 0}}}, {{{11.469000000000001`, 
+                    66.54700000000001}, {45., 82.418}, {78.398, 
+                    66.54700000000001}}, {{45., 86.73400000000001}, {
+                    2.2230000000000003`, 66.54700000000001}, {
+                    2.2230000000000003`, 62.547}, {87.777, 62.547}, {87.777, 
+                    66.54700000000001}}}]}, {
+                    FaceForm[
+                    RGBColor[0.648987, 0.648987, 0.648987, 1.]]}, 
+                   StripOnInput -> False]}, AspectRatio -> 1, Axes -> False, 
+                 Background -> None, Frame -> None, FrameTicks -> None, 
+                 ImageSize -> 
+                 Dynamic[{
+                   Automatic, 
+                    3.5 (CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification])}, ImageSizeCache -> {45., {0., 9.}}]], 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Name: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"Patient Medical Data for Novel Coronavirus 2019-nCoV \
+from Wuhan, China\"", "\" \"", 
+                    
+                    TemplateBox[{
+                    "\"\[RightGuillemet]\"", 
+                    "https://datarepository.wolframcloud.com/resources/\
+Patient-Medical-Data-for-Novel-Coronavirus-2019-nCoV-from-Wuhan-China"}, 
+                    "HyperlinkURL"]}, "RowDefault"], "SummaryItem"]}], 
+                   TagBox["\"\"", "SummaryItem"]}, {
+                   RowBox[{
+                    TagBox["\"Type: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"DataResource\"", "SummaryItem"]}], 
+                   "\[SpanFromLeft]"}, {
+                   RowBox[{
+                    TagBox["\"Description: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"Medical records of patients infected with novel \
+coronavirus\"", "SummaryItem"]}], "\[SpanFromLeft]"}, {
+                   RowBox[{
+                    TagBox["\"Categories: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{
+                    ",", "\",\"", "\"Health\"", "\"Healthcare\"", 
+                    "\"Medicine\"", "\"Statistics\""}, "RowWithSeparators"], 
+                    Short], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"ContentTypes: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "\"Text\""}, 
+                    "RowWithSeparators"], Short], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Keywords: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    RowBox[{
+                    "\"Novel Coronavirus\"", ",", "\"Wuhan Coronavirus\"", 
+                    ",", "\"Coronavirus\"", ",", "\"2019-nCoV\"", ",", 
+                    "\"ncov-2019\"", ",", "\"nCoV-2019\"", ",", 
+                    "\"nCoV2019\"", ",", "\"ncov2019\"", ",", "\"2019nCoV\"", 
+                    ",", "\"2019-ncov\"", ",", 
+                    RowBox[{"\"\"", "\[Ellipsis]", "\"v\""}], ",", 
+                    "\"Corona\"", ",", "\"Wuhan\"", ",", "\"virus\"", ",", 
+                    "\"epidemics\"", ",", "\"epidemic\"", ",", 
+                    "\"Infection\"", ",", "\"infectious disease\"", ",", 
+                    "\"Patient Record\"", ",", "\"Medical Record\""}], Short],
+                     "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Documentation: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "\"https://datarepository.wolframcloud.com/resources/\
+Patient-Medical-Data-for-Novel-Coronavirus-2019-nCoV-from-Wuhan-China\"", 
+                    "https://datarepository.wolframcloud.com/resources/\
+Patient-Medical-Data-for-Novel-Coronavirus-2019-nCoV-from-Wuhan-China"}, 
+                    "HyperlinkURL"], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Data Location: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    DynamicModuleBox[{
+                    ResourceSystemClient`Private`typesetstorage$$ = 
+                    ResourceSystemClient`Private`typesetstorageLocation, 
+                    ResourceSystemClient`Private`info$$}, 
+                    DynamicBox[
+                    ToBoxes[
+                    ResourceSystemClient`Private`info$$ = 
+                    ResourceSystemClient`Private`resourceInfo[
+                    "732a817d-f81e-4eca-a562-3323ba36145a"]; If[
+                    AssociationQ[ResourceSystemClient`Private`info$$], 
+                    ResourceSystemClient`Private`typesetstorage$$[
+                    Lookup[
+                    ResourceSystemClient`Private`info$$, 
+                    "ContentElementLocations", None]], 
+                    Missing["NotAvailable"]], StandardForm]], 
+                    DynamicModuleValues :> {}], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"UUID: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    "\"732a817d-f81e-4eca-a562-3323ba36145a\"", 
+                    "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Version: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["\"3.0.0\"", "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Size: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    
+                    TemplateBox[{
+                    "76.842792`", "\"MB\"", "megabytes", "\"Megabytes\""}, 
+                    "Quantity", SyntaxForm -> Mod], "SummaryItem"]}], ""}, {
+                   RowBox[{
+                    TagBox["\"Elements: \"", "SummaryItemAnnotation"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    TagBox[
+                    
+                    TemplateBox[{",", "\",\"", "\"Dataset\""}, 
+                    "RowWithSeparators"], Short[#, 2]& ], "SummaryItem"]}], 
+                   ""}}, GridBoxAlignment -> {
+                  "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+                 False, GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                 GridBoxSpacings -> {
+                  "Columns" -> {{2}}, "Rows" -> {{Automatic}}}, 
+                 BaseStyle -> {
+                  ShowStringCharacters -> False, NumberMarks -> False, 
+                   PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+              GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+              BaselinePosition -> {1, 1}]}, 
+           Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+         "SummaryPanel"],
+        DynamicModuleValues:>{}], "]"}],
+      ResourceObject[
+       Association[
+       "Name" -> 
+        "Patient Medical Data for Novel Coronavirus 2019-nCoV from Wuhan, \
+China", "UUID" -> "732a817d-f81e-4eca-a562-3323ba36145a", "ResourceType" -> 
+        "DataResource", "Version" -> "3.0.0", "Description" -> 
+        "Medical records of patients infected with novel coronavirus", 
+        "RepositoryLocation" -> 
+        URL["https://www.wolframcloud.com/objects/resourcesystem/api/1.0"], 
+        "WolframLanguageVersionRequired" -> "10.0", "ContentSize" -> 
+        Quantity[76.842792, "Megabytes"], "ContentElements" -> {"Dataset"}]],
+      Editable->False,
+      SelectWithContents->True,
+      Selectable->False]}
+   },
+   DefaultBaseStyle->"Column",
+   GridBoxAlignment->{"Columns" -> {{Left}}},
+   GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+  "Column"]], "Output",
+ CellChangeTimes->{3.7900174109048347`*^9, 3.7900174842429466`*^9},
+ CellLabel->"Out[73]=",ExpressionUUID->"5deb2e36-ce72-4514-a13d-35a1b053f634"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ds1", "[", 
+  RowBox[{"Max", ",", "\"\<ReleaseDate\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.7900172709857163`*^9, 3.7900172767268853`*^9}, {
+  3.7900174133258996`*^9, 3.790017413601912*^9}},
+ CellLabel->"In[74]:=",ExpressionUUID->"bee9b7f8-f742-4062-a3e3-f27c65ce2828"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{
+     StyleBox["\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+     "\"Wed 5 Feb 2020\""}], 
+   RowBox[{"DateObject", "[", 
+     RowBox[{
+       RowBox[{"{", 
+         RowBox[{"2020", ",", "2", ",", "5"}], "}"}], ",", "\"Day\"", ",", 
+       "\"Gregorian\"", ",", 
+       RowBox[{"-", "6.`"}]}], "]"}]},
+  "DateObject",
+  Editable->False]], "Output",
+ CellChangeTimes->{3.7900172773549037`*^9, 3.790017323065248*^9, 
+  3.7900174141769257`*^9, 3.7900174873690367`*^9},
+ CellLabel->"Out[74]=",ExpressionUUID->"ac30b4ee-99f6-4630-829f-0f747bc79b2c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ds2", "[", 
+   RowBox[{"1", ",", "\"\<ConfirmedCases\>\""}], "]"}], "[", 
+  "\"\<LastDate\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7900172709857163`*^9, 3.7900172767268853`*^9}, {
+  3.7900174133258996`*^9, 3.7900174412907085`*^9}},
+ CellLabel->"In[75]:=",ExpressionUUID->"ec356cf9-fd6c-48b3-aca2-31da26878d03"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{"\"Tue 4 Feb 2020 22:00:00\"", 
+     StyleBox[
+      RowBox[{"\"GMT\"", "\[InvisibleSpace]", 
+        StyleBox[
+         RowBox[{"-", "6.`"}], NumberMarks -> False, StripOnInput -> False]}],
+       FontColor -> GrayLevel[0.5]]}], 
+   RowBox[{"DateObject", "[", 
+     RowBox[{
+       RowBox[{"{", 
+         RowBox[{
+          "2020", ",", "2", ",", "4", ",", "22", ",", "0", ",", "0.`"}], 
+         "}"}], ",", "\"Instant\"", ",", "\"Gregorian\"", ",", 
+       RowBox[{"-", "6.`"}]}], "]"}]},
+  "DateObject",
+  Editable->False]], "Output",
+ CellChangeTimes->{3.7900174422077365`*^9, 3.7900174882290654`*^9},
+ CellLabel->"Out[75]=",ExpressionUUID->"c4ae4913-f8c7-46ca-92dd-8d9fc3ec8e34"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ds3", "[", 
+  RowBox[{"Max", ",", "\"\<DateOfConfirmation\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.7900174458458385`*^9, 3.79001746289233*^9}},
+ CellLabel->"In[76]:=",ExpressionUUID->"897ecce4-5b85-47de-9c22-3a737693328c"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{
+     StyleBox["\"Day: \"", FontColor -> GrayLevel[0.5], FontWeight -> Plain], 
+     "\"Tue 4 Feb 2020\""}], 
+   RowBox[{"DateObject", "[", 
+     RowBox[{
+       RowBox[{"{", 
+         RowBox[{"2020", ",", "2", ",", "4"}], "}"}], ",", "\"Day\"", ",", 
+       "\"Gregorian\"", ",", 
+       RowBox[{"-", "6.`"}]}], "]"}]},
+  "DateObject",
+  Editable->False]], "Output",
+ CellChangeTimes->{{3.7900174643953753`*^9, 3.790017489698101*^9}},
+ CellLabel->"Out[76]=",ExpressionUUID->"eb080139-cb9d-4f87-a532-ef3505a68330"]
+}, Open  ]]
+},
+WindowSize->{1920, 1018},
+WindowMargins->{{-5.5, Automatic}, {Automatic, -5.5}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (February 5, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4fe5f3cb-127a-4b18-83a7-c4692cbe16bc"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 940, 23, 87, "Input",ExpressionUUID->"ad681be8-dff2-4d3b-8e2d-a7db5da35da2"],
+Cell[1523, 47, 60569, 1172, 207, "Output",ExpressionUUID->"5deb2e36-ce72-4514-a13d-35a1b053f634"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[62129, 1224, 299, 5, 28, "Input",ExpressionUUID->"bee9b7f8-f742-4062-a3e3-f27c65ce2828"],
+Cell[62431, 1231, 603, 15, 44, "Output",ExpressionUUID->"ac30b4ee-99f6-4630-829f-0f747bc79b2c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[63071, 1251, 349, 7, 28, "Input",ExpressionUUID->"ec356cf9-fd6c-48b3-aca2-31da26878d03"],
+Cell[63423, 1260, 725, 18, 44, "Output",ExpressionUUID->"c4ae4913-f8c7-46ca-92dd-8d9fc3ec8e34"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64185, 1283, 252, 4, 28, "Input",ExpressionUUID->"897ecce4-5b85-47de-9c22-3a737693328c"],
+Cell[64440, 1289, 554, 14, 44, "Output",ExpressionUUID->"eb080139-cb9d-4f87-a532-ef3505a68330"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

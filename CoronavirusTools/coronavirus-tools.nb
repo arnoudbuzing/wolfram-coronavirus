@@ -1,0 +1,129 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4329,        121]
+NotebookOptionsPosition[      3219,         94]
+NotebookOutlinePosition[      3625,        110]
+CellTagsIndexPosition[      3582,        107]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"PacletDirectoryAdd", "[", "\[IndentingNewLine]", 
+  RowBox[{"FileNameJoin", "[", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"ParentDirectory", "[", 
+      RowBox[{"NotebookDirectory", "[", "]"}], "]"}], ",", 
+     "\[IndentingNewLine]", "\"\<CoronavirusTools\>\""}], 
+    "\[IndentingNewLine]", "}"}], "]"}], "\[IndentingNewLine]", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.7903547797641864`*^9, 3.7903548501004343`*^9}, {
+  3.790354896757262*^9, 3.790354914723575*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"3cdc8f17-ccc5-40a1-a7f7-8c749c34bc53"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"D:\\\\git\\\\wolfram-coronavirus\\\\CoronavirusTools\"\>", 
+   ",", "\<\"D:\\\\git\\\\wolfram-coronavirus\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7903548369341984`*^9, {3.7903548989382954`*^9, 3.7903549153015857`*^9}},
+ CellLabel->"Out[10]=",ExpressionUUID->"fb33b68e-012e-484c-a602-9d73b24ba5a3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"PacletFind", "[", "\"\<CoronavirusTools`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7903548822860007`*^9, 3.7903548913071632`*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"009e4c22-e827-4deb-abca-ae38fe11b22d"],
+
+Cell[BoxData[
+ RowBox[{"{", "}"}]], "Output",
+ CellChangeTimes->{{3.790354891566166*^9, 3.790354916903613*^9}},
+ CellLabel->"Out[11]=",ExpressionUUID->"4636c39a-4a7c-4362-98b2-68d598dbb235"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<CoronavirusTools`\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.7903548391002364`*^9, 3.7903548456503534`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"e8472096-b8d1-46d4-a3af-7744cb184e7d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Get", "noopen", 
+   "\"Cannot open \
+\\!\\(\\*RowBox[{\\\"\\\\\\\"CoronavirusTools`\\\\\\\"\\\"}]\\).\"", 2, 6, 4, 
+   20645046341995972221, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.790354845940358*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"a000b25c-764c-48ba-8d45-20b3631bc802"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Needs", "nocont", 
+   "\"Context \\!\\(\\*RowBox[{\\\"\\\\\\\"CoronavirusTools`\\\\\\\"\\\"}]\\) \
+was not created when Needs was evaluated.\"", 2, 6, 5, 20645046341995972221, 
+   "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.79035484604136*^9},
+ CellLabel->
+  "During evaluation of \
+In[6]:=",ExpressionUUID->"59051b9f-23bd-40b8-8354-8a61b8a12c01"],
+
+Cell[BoxData["$Failed"], "Output",
+ CellChangeTimes->{3.790354846053361*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"49672531-c8a9-40b2-9a0d-5cdbfaf05fe2"]
+}, Open  ]]
+},
+WindowSize->{959, 1007},
+WindowMargins->{{Automatic, 168.5}, {Automatic, 324}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (January 20, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"356b44b6-7e0c-4941-a1d4-fc18a8f3a0e5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 597, 12, 126, "Input",ExpressionUUID->"3cdc8f17-ccc5-40a1-a7f7-8c749c34bc53"],
+Cell[1180, 36, 351, 6, 32, "Output",ExpressionUUID->"fb33b68e-012e-484c-a602-9d73b24ba5a3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1568, 47, 236, 3, 28, "Input",ExpressionUUID->"009e4c22-e827-4deb-abca-ae38fe11b22d"],
+Cell[1807, 52, 190, 3, 32, "Output",ExpressionUUID->"4636c39a-4a7c-4362-98b2-68d598dbb235"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2034, 60, 230, 3, 28, "Input",ExpressionUUID->"e8472096-b8d1-46d4-a3af-7744cb184e7d"],
+Cell[2267, 65, 369, 10, 23, "Message",ExpressionUUID->"a000b25c-764c-48ba-8d45-20b3631bc802"],
+Cell[2639, 77, 407, 10, 23, "Message",ExpressionUUID->"59051b9f-23bd-40b8-8354-8a61b8a12c01"],
+Cell[3049, 89, 154, 2, 32, "Output",ExpressionUUID->"49672531-c8a9-40b2-9a0d-5cdbfaf05fe2"]
+}, Open  ]]
+}
+]
+*)
+
