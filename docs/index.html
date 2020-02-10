@@ -18,12 +18,22 @@ h1 {
 <h1>Coronavirus dashboard</h1>
 
 <div id="viz0"></div>
+<div id="viz1"></div>
 
 <script>
 new roughViz.Bar({
     title: 'Confirmed cases in China',
     element: '#viz0',
     data: 'cases.csv',
+    labels: 'region',
+    values: 'cases',
+    width: window.innerWidth / 4
+});
+
+new roughViz.Bar({
+    title: 'International cases',
+    element: '#viz1',
+    data: 'cases-by-country.csv',
     labels: 'region',
     values: 'cases',
     width: window.innerWidth / 4
