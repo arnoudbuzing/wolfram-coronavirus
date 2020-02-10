@@ -11,6 +11,7 @@
 Dashboard:
 
 * [Dashboard with data](https://arnoudbuzing.github.io/wolfram-coronavirus/)
+
 Twitch live streams:
 
 * [Recording of my live Twitch session](https://www.twitch.tv/videos/547321229)
