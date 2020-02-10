@@ -1,6 +1,6 @@
 BeginPackage["CoronavirusTools`"];
 
-test:usage = "testing 123"
+test::usage = "testing 123";
 
 Begin["`Private`"];
 

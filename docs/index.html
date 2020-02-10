@@ -25,7 +25,7 @@ h1 {
 new roughViz.Bar({
     title: 'Confirmed cases in China',
     element: '#viz0',
-    data: 'cases.csv',
+    data: 'data/cases.csv',
     labels: 'region',
     values: 'cases',
     width: 800
@@ -34,7 +34,7 @@ new roughViz.Bar({
 new roughViz.Bar({
     title: 'International cases',
     element: '#viz1',
-    data: 'cases-by-country.csv',
+    data: 'data/cases-by-country.csv',
     labels: 'country',
     values: 'cases',
     width: 800
@@ -43,12 +43,10 @@ new roughViz.Bar({
 new roughViz.Line({
     title: 'Timeline for Wuhan',
     element: '#viz2',
-    data: 'wuhan-timeline.csv',
+    data: 'data/wuhan-timeline.csv',
     y: 'cases',
     width: 800
 });
-
-
 </script>
 
 </body>
