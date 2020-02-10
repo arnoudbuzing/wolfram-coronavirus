@@ -7,12 +7,14 @@
 </head>
 
 <body>
+
+<h1>dashboard</h1>
 <div id="viz0"></div>
 
 
 <script>
-        // create Bar chart from csv file, using default options
- new roughViz.Bar({
+new roughViz.Bar({
+    title: 'Confirmed cases in Chinese provinces',
     element: '#viz0', // container selection
     data: 'cases.csv',
     labels: 'region',
