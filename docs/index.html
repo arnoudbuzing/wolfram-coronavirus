@@ -17,9 +17,9 @@ h1 {
 
 <h1>Coronavirus dashboard</h1>
 
-<div id="viz0" display: inline></div>
-<div id="viz1" display: inline></div>
-<div id="viz3" display: inline></div>
+<div id="viz0"></div>
+<div id="viz1"></div>
+<div id="viz2"></div>
 
 <script>
 new roughViz.Bar({
@@ -42,7 +42,7 @@ new roughViz.Bar({
 
 new roughViz.Line({
     title: 'Timeline for Wuhan',
-    element: '#viz3',
+    element: '#viz2',
     data: 'wuhan-timeline.csv',
     y: 'cases',
     width: 800
