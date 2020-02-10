@@ -19,6 +19,7 @@ h1 {
 
 <div id="viz0"></div>
 <div id="viz1"></div>
+<div id="viz3"></div>
 
 <script>
 new roughViz.Bar({
@@ -38,6 +39,17 @@ new roughViz.Bar({
     values: 'cases',
     width: 800
 });
+
+new roughViz.Line({
+    title: 'Timeline for Wuhan',
+    element: '#viz2',
+    data: 'wuhan-timeline.csv',
+    labels: 'day',
+    values: 'cases',
+    width: 800
+});
+
+
 </script>
 
 </body>
