@@ -1,8 +1,26 @@
 <!doctype html>
 <html>
 <head>
-<title>hi</title>
+    <title>Coronavirus Dashboard</title>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/rough-viz@1.0.5"></script>
 </head>
+
 <body>
+<div id="viz0"></div>
+
+
+<script>
+        // create Bar chart from csv file, using default options
+ new roughViz.Bar({
+    element: '#viz0', // container selection
+    data: 'cases.csv',
+    labels: 'flavor',
+    values: 'price'
+});
+
+
+    </script>
+
 </body>
 </html>
