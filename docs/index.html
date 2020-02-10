@@ -6,6 +6,9 @@
     <script src="https://unpkg.com/rough-viz@1.0.5"></script>
 </head>
 
+<style>
+    h1: { font-size: 60px; font-family: gaeguregular; }
+</style>
 <body>
 
 <h1>dashboard</h1>
@@ -15,7 +18,7 @@
 <script>
 new roughViz.Bar({
     title: 'Confirmed cases in China',
-    element: '#viz0', // container selection
+    element: '#viz0',
     data: 'cases.csv',
     labels: 'region',
     values: 'cases',
