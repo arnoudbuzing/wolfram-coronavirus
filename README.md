@@ -57,6 +57,10 @@ Posts on the Wolfram Community:
 
 ## Results
 
+### Province graph
+
+![Province graph](images/province-graph.png)
+
 ### Animation of global spread of Coronavirus
 
 ![Animation of global spread of Coronavirus](images/out.gif)
