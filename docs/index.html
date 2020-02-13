@@ -14,19 +14,9 @@ h1 {
     font-family: gaeguregular;
 }
 
-#mapid { height: 180px; }
+#mapid { height: 300px; }
 
 </style>
-
-<script>
-    var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-    maxZoom: 18,
-    id: 'mapbox/streets-v11',
-    accessToken: 'pk.eyJ1IjoiYXJub3VkYnV6aW5nIiwiYSI6ImNrNmp2cmthdzAwZTAzZ3Bta283emI5MG0ifQ.Eo_CwJOG5ME1T8I2-Ba11Q'
-}).addTo(mymap);
-</script>
 
 <body>
 
@@ -34,9 +24,24 @@ h1 {
 
 <div id="mapid"></div>
 
+<script type="text/javascript" src="https://leafletjs.com/examples/choropleth/us-states.js"></script>
+
+<script>
+    var map = L.map('mapid').setView([37.8, -96], 4);
+    L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner/${z}/${x}/${y}.png', {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+    maxZoom: 19
+}).addTo(map);
+
+L.geoJson(statesData).addTo(map);
+</script>
+
+
 <div id="viz0"></div>
 <div id="viz1"></div>
 <div id="viz2"></div>
+
+
 
 <script>
 new roughViz.Bar({
