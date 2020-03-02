@@ -1,0 +1,136 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4833,        128]
+NotebookOptionsPosition[      3889,        106]
+NotebookOutlinePosition[      4295,        122]
+CellTagsIndexPosition[      4252,        119]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"git", "=", "\"\<C:\\\\Program Files\\\\Git\\\\bin\\\\git\>\""}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.7921747248717623`*^9, 3.792174726700781*^9}},
+ CellLabel->"In[46]:=",ExpressionUUID->"ddbe2dcb-57e8-4eaf-b24c-e2c4226f69d2"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"repo", "=", "\"\<git@github.com:CSSEGISandData/COVID-19.git\>\""}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.792174711303624*^9, 3.7921747150066633`*^9}},
+ CellLabel->"In[44]:=",ExpressionUUID->"0e703faa-eaca-4864-8cf3-e599ac51afde"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"dir", "=", 
+   RowBox[{"FileNameJoin", "[", 
+    RowBox[{"{", 
+     RowBox[{"\"\<D:\>\"", ",", "\"\<git\>\"", ",", "\"\<COVID-19\>\""}], 
+     "}"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.792173799844573*^9, 3.7921738120245495`*^9}, {
+   3.792174355373994*^9, 3.7921743816752167`*^9}, 3.7921747170876827`*^9},
+ CellLabel->"In[45]:=",ExpressionUUID->"6d44806a-9dff-4e54-84c1-a40098a96078"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"clone", "[", 
+   RowBox[{"git_", ",", "repo_", ",", "dir_"}], "]"}], ":=", 
+  RowBox[{"RunProcess", "[", 
+   RowBox[{"{", 
+    RowBox[{"git", ",", "\"\<clone\>\"", ",", "repo", ",", "dir"}], "}"}], 
+   "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"pull", "[", 
+   RowBox[{"git_", ",", "dir_"}], "]"}], ":=", 
+  RowBox[{"RunProcess", "[", 
+   RowBox[{"{", 
+    RowBox[{"git", ",", "\"\<-C\>\"", ",", "dir", ",", "\"\<pull\>\""}], 
+    "}"}], "]"}]}]}], "Input",
+ CellChangeTimes->{{3.7921739191474447`*^9, 3.7921739865531616`*^9}, {
+  3.7921740589474535`*^9, 3.7921740692577724`*^9}, {3.7921744036700172`*^9, 
+  3.792174403852023*^9}, {3.792174633582425*^9, 3.7921746501581287`*^9}, {
+  3.7921746868133736`*^9, 3.7921746977174854`*^9}, {3.7921747300928154`*^9, 
+  3.792174752893047*^9}},
+ CellLabel->"In[47]:=",ExpressionUUID->"fbc989fa-2315-4052-b5e1-e665e9d6fa26"],
+
+Cell[BoxData[
+ RowBox[{"If", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"FileType", "[", "dir", "]"}], "===", "None"}], ",", 
+   RowBox[{"clone", "[", 
+    RowBox[{"git", ",", "repo", ",", "dir"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7921746555981865`*^9, 3.792174664268182*^9}, {
+  3.792174704238551*^9, 3.7921747077805877`*^9}, {3.792174759820774*^9, 
+  3.7921747732609124`*^9}},
+ CellLabel->"In[49]:=",ExpressionUUID->"63d040da-25c4-448f-84cd-3d21f86216d2"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"If", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"FileType", "[", "dir", "]"}], "===", "Directory"}], ",", 
+   RowBox[{"pull", "[", 
+    RowBox[{"git", ",", "dir"}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7921746555981865`*^9, 3.7921746757166753`*^9}, {
+  3.7921747789409685`*^9, 3.792174784645026*^9}},
+ CellLabel->"In[50]:=",ExpressionUUID->"693ee758-ce7c-41a8-988a-0bca8340a640"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{
+   RowBox[{"\<\"ExitCode\"\>", "\[Rule]", "0"}], ",", 
+   RowBox[{"\<\"StandardOutput\"\>", 
+    "\[Rule]", "\<\"Already up to date.\\n\"\>"}], ",", 
+   RowBox[{"\<\"StandardError\"\>", 
+    "\[Rule]", "\<\"From github.com:CSSEGISandData/COVID-19\\n   \
+c4087a5..88437a5  web-data   -> origin/web-data\\n\"\>"}]}], 
+  "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{3.7921747870170507`*^9},
+ CellLabel->"Out[50]=",ExpressionUUID->"8dcdeb50-ead0-417b-846e-c3e1834ff02d"]
+}, Open  ]]
+},
+WindowSize->{1206, 766},
+WindowMargins->{{Automatic, 126}, {88.5, Automatic}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (February 28, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3cfa03f3-01e0-4a55-9a13-9b13c6359a77"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 266, 5, 28, "Input",ExpressionUUID->"ddbe2dcb-57e8-4eaf-b24c-e2c4226f69d2"],
+Cell[827, 27, 269, 5, 28, "Input",ExpressionUUID->"0e703faa-eaca-4864-8cf3-e599ac51afde"],
+Cell[1099, 34, 433, 9, 28, "Input",ExpressionUUID->"6d44806a-9dff-4e54-84c1-a40098a96078"],
+Cell[1535, 45, 892, 20, 48, "Input",ExpressionUUID->"fbc989fa-2315-4052-b5e1-e665e9d6fa26"],
+Cell[2430, 67, 470, 10, 28, "Input",ExpressionUUID->"63d040da-25c4-448f-84cd-3d21f86216d2"],
+Cell[CellGroupData[{
+Cell[2925, 81, 412, 9, 28, "Input",ExpressionUUID->"693ee758-ce7c-41a8-988a-0bca8340a640"],
+Cell[3340, 92, 533, 11, 91, "Output",ExpressionUUID->"8dcdeb50-ead0-417b-846e-c3e1834ff02d"]
+}, Open  ]]
+}
+]
+*)
+
