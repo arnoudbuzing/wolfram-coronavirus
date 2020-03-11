@@ -57,6 +57,10 @@ Posts on the Wolfram Community:
 
 ## Results
 
+### Hospital capacity
+
+![Hospital capacity](images/hospital-capacity.gif)
+
 ### Province graph
 
 ![Province graph](images/province-graph.png)
